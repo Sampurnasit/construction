@@ -355,10 +355,10 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* GSTIN Badge */}
+              {/* Certification Badge */}
               <div className="pt-4 border-t border-[#D4A017]/20 flex items-center justify-between text-xs">
-                <span className="text-white/70">GST Registered</span>
-                <span className="font-mono font-bold text-[#F2D675]">{siteConfig.company.gstNo}</span>
+                <span className="text-white/70">Legal Entity</span>
+                <span className="font-semibold text-[#F2D675]">Govt Registered Civil Contractor</span>
               </div>
             </div>
 

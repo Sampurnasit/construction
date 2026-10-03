@@ -56,7 +56,7 @@ export default function AboutUs() {
                     Our Heritage &amp; Commitment
                   </h3>
                   <p className="text-xs text-[#52606D] font-medium">
-                    Operating under GSTIN: {siteConfig.company.gstNo} • Kolkata, WB
+                    Govt Registered Civil Contractor • Kolkata, WB
                   </p>
                 </div>
               </div>

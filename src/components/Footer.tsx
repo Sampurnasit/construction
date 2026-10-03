@@ -62,9 +62,9 @@ export default function Footer() {
             <div className="p-3.5 rounded-xl bg-[#063D1E] border border-[#D4A017]/40 flex items-center justify-between text-xs max-w-sm">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#F2D675]" />
-                <span className="font-medium text-white/90">GSTIN:</span>
+                <span className="font-medium text-white/90">Official Registration:</span>
               </div>
-              <span className="font-mono font-bold text-[#F2D675]">{siteConfig.company.gstNo}</span>
+              <span className="font-semibold text-[#F2D675]">Verified Contractor</span>
             </div>
           </div>
 

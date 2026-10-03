@@ -26,14 +26,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "BSA Enterprise | Govt Civil Contractor & General Order Supplier in Kolkata",
   description:
-    "BSA Enterprise (Founder: Sayantan Das, GST: 19DQYPD2942H1ZC) is a premier Government Civil Contractor and General Order Supplier in Kolkata, West Bengal. Infrastructure works, RCC roads, drainage, building construction, and certified materials supply.",
+    "BSA Enterprise (Founder: Sayantan Das) is a premier Government Civil Contractor and General Order Supplier in Kolkata, West Bengal. Infrastructure works, RCC roads, drainage, building construction, and certified materials supply.",
   keywords: [
     "BSA Enterprise",
     "Sayantan Das",
     "Govt Civil Contractor Kolkata",
     "General Order Supplier Kolkata",
     "Government Registered Contractor",
-    "19DQYPD2942H1ZC",
     "Construction Company Kolkata",
     "Regent Colony Kolkata 700040",
     "Civil Engineering West Bengal",
@@ -74,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BSA Enterprise | Govt Civil Contractor & General Order Supplier in Kolkata",
     description:
-      "Premier Government Civil Contractor and General Order Supplier based in Regent Colony, Kolkata. GST: 19DQYPD2942H1ZC.",
+      "Premier Government Civil Contractor and General Order Supplier based in Regent Colony, Kolkata.",
     images: ["/banner.jpg"],
   },
   icons: {

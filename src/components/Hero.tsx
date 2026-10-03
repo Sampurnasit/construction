@@ -88,7 +88,7 @@ export default function Hero() {
               <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] animate-ping" />
               <ShieldCheck className="w-4 h-4 text-[#F2D675]" />
               <span className="text-xs sm:text-sm font-semibold tracking-wide text-[#F2D675]">
-                Govt Registered Civil Contractor • GST: {siteConfig.company.gstNo}
+                Govt Registered Civil Contractor • Kolkata, West Bengal
               </span>
             </div>
 
@@ -201,7 +201,7 @@ export default function Hero() {
               {/* Floating Trust Pill */}
               <div className="absolute -top-3 -left-3 sm:-left-5 bg-[#0B5D2E] border-2 border-[#F2D675] text-white px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 text-xs font-bold animate-float-slow">
                 <FileCheck2 className="w-4 h-4 text-[#F2D675]" />
-                <span>GST: 19DQYPD2942H1ZC</span>
+                <span>Govt Certified Contractor</span>
               </div>
 
               {/* Tagline Ribbon */}

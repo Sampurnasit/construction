@@ -97,7 +97,7 @@ export default function WhyChooseUs() {
           </div>
           <div className="flex-1">
             <h4 className="text-base font-bold text-white font-['Montserrat',sans-serif]">
-              Government Civil Contractor • Registered GST No: {siteConfig.company.gstNo}
+              Government Civil Contractor • Kolkata &amp; West Bengal
             </h4>
             <p className="text-xs sm:text-sm text-white/75 mt-0.5">
               Available for municipal tender bids, PWD subcontracts, and high-volume construction material supplies across West Bengal.

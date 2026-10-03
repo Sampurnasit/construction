@@ -94,8 +94,8 @@ export const siteConfig = {
     {
       value: 100,
       suffix: "%",
-      label: "GST Registered & Audited",
-      subtext: "GSTIN: 19DQYPD2942H1ZC"
+      label: "Government Compliance",
+      subtext: "Audited & 100% Tax Compliant"
     },
     {
       value: 99,
@@ -333,7 +333,7 @@ export const siteConfig = {
     },
     {
       q: "How can we verify BSA Enterprise's GST and registration credentials?",
-      a: "Our registered GSTIN is 19DQYPD2942H1ZC under the Government of India & West Bengal GST Department. You can verify it directly on the official GST portal (gst.gov.in) or click the 'Verify GSTIN' button in our Credentials section."
+      a: "You can view and verify our official government GSTIN directly in our Credentials section below or via the official GST portal (services.gst.gov.in)."
     },
     {
       q: "What materials do you supply under General Order Supply?",

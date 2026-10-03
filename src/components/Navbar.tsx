@@ -50,7 +50,7 @@ export default function Navbar() {
               <ShieldCheck className="w-3 h-3 text-[#F2D675]" /> Govt Registered
             </span>
             <span className="text-[#FFFDF0]/90 font-medium hidden md:inline">
-              GSTIN: <span className="text-[#F2D675] font-semibold">{siteConfig.company.gstNo}</span>
+              Govt Civil Contractor &amp; General Order Supplier
             </span>
             <span className="text-[#D4A017]/70 hidden md:inline">•</span>
             <span className="text-[#FFFDF0]/80">Regent Colony, Kolkata - 700040</span>
@@ -168,8 +168,8 @@ export default function Navbar() {
           <div className="lg:hidden bg-[#063D1E] border-t border-[#D4A017]/30 px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-in slide-in-from-top duration-300">
             <div className="grid grid-cols-2 gap-2 pt-1 pb-2 border-b border-[#D4A017]/20">
               <div className="bg-[#042613] p-2.5 rounded-lg border border-[#D4A017]/30 text-center">
-                <span className="text-[10px] text-[#F2D675] font-semibold block uppercase">GST Registered</span>
-                <span className="text-xs text-white font-mono">{siteConfig.company.gstNo}</span>
+                <span className="text-[10px] text-[#F2D675] font-semibold block uppercase">Govt Contractor</span>
+                <span className="text-xs text-white font-semibold">Civil &amp; Supply</span>
               </div>
               <div className="bg-[#042613] p-2.5 rounded-lg border border-[#D4A017]/30 text-center">
                 <span className="text-[10px] text-[#F2D675] font-semibold block uppercase">Founder</span>
