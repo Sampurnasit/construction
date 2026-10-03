@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-green: #0B5D2E;
+  --color-deep-green: #063D1E;
+  --color-forest-dark: #032412;
+  --color-emerald-light: #0E7339;
+  --color-emerald-hover: #138845;
+  --color-gold-accent: #D4A017;
+  --color-gold-light: #F2D675;
+  --color-gold-mid: #C8961A;
+  --color-gold-dark: #8C6A0E;
+  --color-warm-cream: #FFFDF0;
+  --color-cream-card: #FAF8EC;
+  --color-charcoal-dark: #121921;
+  --color-charcoal: #1F2933;
+  --color-charcoal-muted: #52606D;
+  --font-heading: var(--font-heading), 'Montserrat', sans-serif;
+  --font-sans: var(--font-sans), 'Inter', sans-serif;
+}
+
+:root {
+  --primary-green: #0B5D2E;
+  --deep-green: #063D1E;
+  --gold-accent: #D4A017;
+  --warm-cream: #FFFDF0;
+  --charcoal: #1F2933;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: #FFFDF0;
+  color: #1F2933;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #063D1E;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4A017, #8C6A0E);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F2D675;
+}
+
+/* Metallic Gold Gradients */
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F2D675 0%, #C8961A 50%, #8C6A0E 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F9E79F 0%, #E5B232 50%, #FAF0CA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #F2D675, #C8961A, #8C6A0E) 1;
+}
+
+/* Gold Button Hover Shimmer */
+.btn-gold-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #F2D675 0%, #C8961A 50%, #8C6A0E 100%);
+  color: #063D1E;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 160, 23, 0.35);
+}
+
+.btn-gold-shimmer:hover {
+  box-shadow: 0 6px 25px rgba(212, 160, 23, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-gold-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(25deg);
+  transition: all 0.75s ease;
+}
+
+.btn-gold-shimmer:hover::after {
+  left: 130%;
+}
+
+/* Outlined Gold Button */
+.btn-gold-outline {
+  border: 2px solid #D4A017;
+  color: #F2D675;
+  background: rgba(6, 61, 30, 0.4);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.btn-gold-outline:hover {
+  background: rgba(212, 160, 23, 0.15);
+  border-color: #F2D675;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.25);
+}
+
+/* Luxury Card Shadow & Hover */
+.luxury-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -5px rgba(11, 93, 46, 0.08), 0 0 1px 1px rgba(212, 160, 23, 0.1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 160, 23, 0.5);
+  box-shadow: 0 20px 35px -10px rgba(11, 93, 46, 0.16), 0 0 0 1px rgba(212, 160, 23, 0.4);
+}
+
+/* Green Luxury Card for Dark Sections */
+.luxury-card-green {
+  background: linear-gradient(160deg, #094a25 0%, #063D1E 100%);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-green:hover {
+  transform: translateY(-6px);
+  border-color: #F2D675;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 160, 23, 0.2);
+}
+
+/* Gold Divider Line */
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4A017, #F2D675, #D4A017, transparent);
+}
+
+/* Hero Background Skyline Silhouette Overlay */
+.hero-skyline-bg {
+  background-color: #063D1E;
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(212, 160, 23, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(14, 115, 57, 0.25) 0%, transparent 60%),
+    linear-gradient(180deg, #042613 0%, #063D1E 45%, #0B5D2E 100%);
+  position: relative;
+}
+
+.hero-skyline-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: 
+    linear-gradient(to right, #D4A017 1px, transparent 1px),
+    linear-gradient(to bottom, #D4A017 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Keyframe animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
