@@ -27,7 +27,7 @@ export default function Home() {
         {/* 4. Core Services (4 Elegant Cards with Hover Lift) */}
         <Services />
 
-        {/* 5. Why Choose Us (6 Gold Points on Rich Emerald Green) */}
+        {/* 5. Why Choose Us (6 Points on Rich Dark Maroon & Red) */}
         <WhyChooseUs />
 
         {/* 6. Systematic 5-Step Process Timeline */}
@@ -46,7 +46,7 @@ export default function Home() {
         <ContactSection />
       </main>
 
-      {/* 11. Luxury Corporate Dark Green Footer */}
+      {/* 11. Red-Orange-Yellow Styled Footer */}
       <Footer />
 
       {/* 12. Floating WhatsApp Instant Action Button */}

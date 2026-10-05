@@ -11,8 +11,6 @@ import {
   CheckCircle2,
   AlertCircle,
   MessageSquare,
-  ShieldCheck,
-  Building,
 } from "lucide-react";
 
 export default function ContactSection() {
@@ -93,17 +91,17 @@ export default function ContactSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#0B5D2E]/10 border border-[#D4A017]/40 px-3.5 py-1.5 rounded-full mb-3">
-            <MessageSquare className="w-4 h-4 text-[#0B5D2E]" />
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0B5D2E]">
+          <div className="inline-flex items-center gap-2 bg-[#DC2626]/10 border border-[#EA580C]/40 px-3.5 py-1.5 rounded-full mb-3">
+            <MessageSquare className="w-4 h-4 text-[#DC2626]" />
+            <span className="text-xs font-bold uppercase tracking-wider text-[#DC2626]">
               Consultation &amp; Tenders
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-['Montserrat',sans-serif] text-[#063D1E] tracking-tight">
-            Connect With <span className="text-[#0B5D2E]">BSA Enterprise</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-['Montserrat',sans-serif] text-[#1C1917] tracking-tight">
+            Connect With <span className="text-[#DC2626]">BSA Enterprise</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#D4A017] to-transparent mx-auto mt-4 mb-5" />
-          <p className="text-base sm:text-lg text-[#52606D] leading-relaxed">
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#EA580C] to-transparent mx-auto mt-4 mb-5" />
+          <p className="text-base sm:text-lg text-[#57534E] leading-relaxed">
             Reach out for official civil project tenders, private development construction, or bulk construction material delivery.
           </p>
         </div>
@@ -112,22 +110,22 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           {/* Left Column: Validated Enquiry Form */}
-          <div className="lg:col-span-7 luxury-card p-8 sm:p-10 border border-[#D4A017]/40">
+          <div className="lg:col-span-7 luxury-card p-8 sm:p-10 border border-[#EA580C]/30 shadow-xl">
             <div className="mb-6">
-              <h3 className="font-['Montserrat',sans-serif] font-bold text-2xl text-[#063D1E]">
+              <h3 className="font-['Montserrat',sans-serif] font-bold text-2xl text-[#1C1917]">
                 Request a Free Quotation
               </h3>
-              <p className="text-xs sm:text-sm text-[#52606D] mt-1">
+              <p className="text-xs sm:text-sm text-[#57534E] mt-1">
                 Fill out the specifications below. Our founder &amp; engineering desk will respond within 24 hours.
               </p>
             </div>
 
             {isSubmitted ? (
-              <div className="p-8 rounded-xl bg-[#063D1E] text-white text-center space-y-4 border border-[#F2D675] animate-in fade-in zoom-in duration-300">
-                <div className="w-16 h-16 rounded-full bg-[#0B5D2E] text-[#F2D675] border-2 border-[#F2D675] mx-auto flex items-center justify-center">
+              <div className="p-8 rounded-xl bg-[#2B0A0A] text-white text-center space-y-4 border border-[#FACC15] animate-in fade-in zoom-in duration-300">
+                <div className="w-16 h-16 rounded-full bg-[#DC2626] text-[#FACC15] border-2 border-[#FACC15] mx-auto flex items-center justify-center">
                   <CheckCircle2 className="w-9 h-9" />
                 </div>
-                <h4 className="font-['Montserrat',sans-serif] font-bold text-2xl text-[#F2D675]">
+                <h4 className="font-['Montserrat',sans-serif] font-bold text-2xl text-[#FACC15]">
                   Enquiry Received Successfully!
                 </h4>
                 <p className="text-sm text-white/90 max-w-md mx-auto leading-relaxed">
@@ -136,7 +134,7 @@ export default function ContactSection() {
                 <div className="pt-3">
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="px-6 py-2.5 rounded-lg text-xs font-bold btn-gold-shimmer cursor-pointer"
+                    className="px-6 py-2.5 rounded-lg text-xs font-bold btn-gold-shimmer text-white cursor-pointer shadow-md"
                   >
                     Send Another Enquiry
                   </button>
@@ -146,7 +144,7 @@ export default function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 {/* Name */}
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-[#063D1E] mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#1C1917] mb-1.5">
                     Your Full Name / Entity *
                   </label>
                   <input
@@ -154,10 +152,10 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Rajesh Ghosh / Modern Infra Ltd"
-                    className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1F2933] bg-[#FFFDF0] focus:outline-none focus:ring-2 transition-all ${
+                    className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1C1917] bg-[#FFFBF5] focus:outline-none focus:ring-2 transition-all ${
                       errors.name
                         ? "border-red-500 focus:ring-red-400"
-                        : "border-[#D4A017]/40 focus:ring-[#0B5D2E] focus:border-[#0B5D2E]"
+                        : "border-[#EA580C]/40 focus:ring-[#DC2626] focus:border-[#DC2626]"
                     }`}
                   />
                   {errors.name && (
@@ -171,7 +169,7 @@ export default function ContactSection() {
                 {/* Phone & Email Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-[#063D1E] mb-1.5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#1C1917] mb-1.5">
                       Contact Number *
                     </label>
                     <input
@@ -179,10 +177,10 @@ export default function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="e.g. 9330967405"
-                      className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1F2933] bg-[#FFFDF0] focus:outline-none focus:ring-2 transition-all ${
+                      className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1C1917] bg-[#FFFBF5] focus:outline-none focus:ring-2 transition-all ${
                         errors.phone
                           ? "border-red-500 focus:ring-red-400"
-                          : "border-[#D4A017]/40 focus:ring-[#0B5D2E] focus:border-[#0B5D2E]"
+                          : "border-[#EA580C]/40 focus:ring-[#DC2626] focus:border-[#DC2626]"
                       }`}
                     />
                     {errors.phone && (
@@ -194,7 +192,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-[#063D1E] mb-1.5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#1C1917] mb-1.5">
                       Email Address *
                     </label>
                     <input
@@ -202,10 +200,10 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. contact@domain.com"
-                      className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1F2933] bg-[#FFFDF0] focus:outline-none focus:ring-2 transition-all ${
+                      className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1C1917] bg-[#FFFBF5] focus:outline-none focus:ring-2 transition-all ${
                         errors.email
                           ? "border-red-500 focus:ring-red-400"
-                          : "border-[#D4A017]/40 focus:ring-[#0B5D2E] focus:border-[#0B5D2E]"
+                          : "border-[#EA580C]/40 focus:ring-[#DC2626] focus:border-[#DC2626]"
                       }`}
                     />
                     {errors.email && (
@@ -219,13 +217,13 @@ export default function ContactSection() {
 
                 {/* Service Dropdown */}
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-[#063D1E] mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#1C1917] mb-1.5">
                     Service Required *
                   </label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-[#D4A017]/40 text-sm text-[#1F2933] bg-[#FFFDF0] focus:outline-none focus:ring-2 focus:ring-[#0B5D2E] focus:border-[#0B5D2E] transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-[#EA580C]/40 text-sm text-[#1C1917] bg-[#FFFBF5] focus:outline-none focus:ring-2 focus:ring-[#DC2626] focus:border-[#DC2626] transition-all"
                   >
                     <option value="Civil Contracting">Civil Contracting (Roads, Drainage, Concrete)</option>
                     <option value="General Order Supply">General Order Supply (TMT Steel, Cement, Safety)</option>
@@ -237,7 +235,7 @@ export default function ContactSection() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-[#063D1E] mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#1C1917] mb-1.5">
                     Project Scope / Delivery Requirements *
                   </label>
                   <textarea
@@ -245,10 +243,10 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Provide details about your project location, estimated timeline, required quantities, or tender specifications..."
-                    className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1F2933] bg-[#FFFDF0] focus:outline-none focus:ring-2 transition-all ${
+                    className={`w-full px-4 py-3 rounded-lg border text-sm text-[#1C1917] bg-[#FFFBF5] focus:outline-none focus:ring-2 transition-all ${
                       errors.message
                         ? "border-red-500 focus:ring-red-400"
-                        : "border-[#D4A017]/40 focus:ring-[#0B5D2E] focus:border-[#0B5D2E]"
+                        : "border-[#EA580C]/40 focus:ring-[#DC2626] focus:border-[#DC2626]"
                     }`}
                   />
                   {errors.message && (
@@ -263,19 +261,19 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl text-sm font-bold btn-gold-shimmer flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full py-4 rounded-xl text-sm font-bold btn-gold-shimmer text-white flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-lg"
                 >
                   {isSubmitting ? (
                     <span>Processing Submission...</span>
                   ) : (
                     <>
                       <span>Submit Official Quotation Request</span>
-                      <Send className="w-4 h-4 text-[#063D1E]" />
+                      <Send className="w-4 h-4 text-white" />
                     </>
                   )}
                 </button>
 
-                <p className="text-[11px] text-center text-[#52606D] pt-1">
+                <p className="text-[11px] text-center text-[#57534E] pt-1">
                   Confidential &amp; Secure. Your data is handled in strict accordance with business privacy.
                 </p>
               </form>
@@ -285,28 +283,28 @@ export default function ContactSection() {
           {/* Right Column: Office Coordinates & Embedded Google Map */}
           <div className="lg:col-span-5 space-y-6">
             {/* Quick Contact Cards */}
-            <div className="bg-[#063D1E] text-white p-7 sm:p-8 rounded-2xl border border-[#D4A017]/40 shadow-xl space-y-5">
+            <div className="bg-[#2B0A0A] text-white p-7 sm:p-8 rounded-2xl border border-[#EA580C]/40 shadow-xl space-y-5">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#F2D675] block">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#FACC15] block">
                   Registered Office
                 </span>
                 <h4 className="font-['Montserrat',sans-serif] font-black text-xl sm:text-2xl text-white">
                   BSA Enterprise
                 </h4>
-                <p className="text-xs text-white/70 mt-0.5">Govt Civil Contractor &amp; General Order Supplier</p>
+                <p className="text-xs text-white/80 mt-0.5">Govt Civil Contractor &amp; General Order Supplier</p>
               </div>
 
-              <div className="space-y-4 pt-2 border-t border-[#D4A017]/20 text-sm">
+              <div className="space-y-4 pt-2 border-t border-[#EA580C]/25 text-sm">
                 {/* Phone */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#042613] border border-[#D4A017]/40 flex items-center justify-center text-[#F2D675] shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#1A0505] border border-[#EA580C]/40 flex items-center justify-center text-[#FACC15] shrink-0 mt-0.5">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-semibold text-white/60 block">Direct Telephone</span>
+                    <span className="text-[11px] font-semibold text-white/70 block">Direct Telephone</span>
                     <a
                       href={siteConfig.company.contact.phoneTel}
-                      className="text-base font-bold text-white hover:text-[#F2D675] transition-colors"
+                      className="text-base font-bold text-white hover:text-[#FACC15] transition-colors"
                     >
                       {siteConfig.company.contact.phoneFormatted}
                     </a>
@@ -315,14 +313,14 @@ export default function ContactSection() {
 
                 {/* Email */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#042613] border border-[#D4A017]/40 flex items-center justify-center text-[#F2D675] shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#1A0505] border border-[#EA580C]/40 flex items-center justify-center text-[#FACC15] shrink-0 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-semibold text-white/60 block">Official Correspondence</span>
+                    <span className="text-[11px] font-semibold text-white/70 block">Official Correspondence</span>
                     <a
                       href={siteConfig.company.contact.emailMailto}
-                      className="text-sm font-semibold text-white hover:text-[#F2D675] transition-colors break-all"
+                      className="text-sm font-semibold text-white hover:text-[#FACC15] transition-colors break-all"
                     >
                       {siteConfig.company.contact.email}
                     </a>
@@ -331,11 +329,11 @@ export default function ContactSection() {
 
                 {/* Address */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#042613] border border-[#D4A017]/40 flex items-center justify-center text-[#F2D675] shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#1A0505] border border-[#EA580C]/40 flex items-center justify-center text-[#FACC15] shrink-0 mt-0.5">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-semibold text-white/60 block">Office Address</span>
+                    <span className="text-[11px] font-semibold text-white/70 block">Office Address</span>
                     <p className="text-sm font-medium text-white/95 leading-relaxed">
                       {siteConfig.company.address.street}, {siteConfig.company.address.city} - {siteConfig.company.address.pincode}
                     </p>
@@ -344,29 +342,29 @@ export default function ContactSection() {
 
                 {/* Working Hours */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#042613] border border-[#D4A017]/40 flex items-center justify-center text-[#F2D675] shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#1A0505] border border-[#EA580C]/40 flex items-center justify-center text-[#FACC15] shrink-0 mt-0.5">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-semibold text-white/60 block">Working Hours</span>
+                    <span className="text-[11px] font-semibold text-white/70 block">Working Hours</span>
                     <p className="text-xs text-white/90">{siteConfig.company.contact.workingHours}</p>
-                    <p className="text-[11px] text-[#F2D675]/80 mt-0.5">{siteConfig.company.contact.sundayNote}</p>
+                    <p className="text-[11px] text-[#FACC15] mt-0.5">{siteConfig.company.contact.sundayNote}</p>
                   </div>
                 </div>
               </div>
 
               {/* Certification Badge */}
-              <div className="pt-4 border-t border-[#D4A017]/20 flex items-center justify-between text-xs">
+              <div className="pt-4 border-t border-[#EA580C]/25 flex items-center justify-between text-xs">
                 <span className="text-white/70">Legal Entity</span>
-                <span className="font-semibold text-[#F2D675]">Govt Registered Civil Contractor</span>
+                <span className="font-semibold text-[#FACC15]">Govt Registered Civil Contractor</span>
               </div>
             </div>
 
             {/* Embedded Google Map */}
-            <div className="rounded-2xl overflow-hidden border-2 border-[#D4A017]/40 shadow-xl bg-[#063D1E]">
-              <div className="p-3 bg-[#042613] border-b border-[#D4A017]/30 flex items-center justify-between text-xs text-[#F2D675] font-bold">
+            <div className="rounded-2xl overflow-hidden border-2 border-[#EA580C]/40 shadow-xl bg-[#2B0A0A]">
+              <div className="p-3 bg-[#1A0505] border-b border-[#EA580C]/30 flex items-center justify-between text-xs text-[#FACC15] font-bold">
                 <div className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5" />
+                  <MapPin className="w-3.5 h-3.5 text-[#EA580C]" />
                   <span>Regent Colony, Kolkata - 700040</span>
                 </div>
                 <a
@@ -375,7 +373,7 @@ export default function ContactSection() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-[11px]"
+                  className="hover:underline text-[11px] text-[#FACC15]"
                 >
                   Open in Maps ↗
                 </a>

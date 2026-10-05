@@ -1,30 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-green: #0B5D2E;
-  --color-deep-green: #063D1E;
-  --color-forest-dark: #032412;
-  --color-emerald-light: #0E7339;
-  --color-emerald-hover: #138845;
-  --color-gold-accent: #D4A017;
-  --color-gold-light: #F2D675;
-  --color-gold-mid: #C8961A;
-  --color-gold-dark: #8C6A0E;
-  --color-warm-cream: #FFFDF0;
-  --color-cream-card: #FAF8EC;
+  --color-primary-green: #DC2626;
+  --color-deep-green: #2B0A0A;
+  --color-forest-dark: #1A0505;
+  --color-emerald-light: #EA580C;
+  --color-emerald-hover: #F97316;
+  --color-gold-accent: #F97316;
+  --color-gold-light: #FACC15;
+  --color-gold-mid: #F59E0B;
+  --color-gold-dark: #C2410C;
+  --color-warm-cream: #FFFBF5;
+  --color-cream-card: #FFFFFF;
   --color-charcoal-dark: #121921;
-  --color-charcoal: #1F2933;
-  --color-charcoal-muted: #52606D;
+  --color-charcoal: #1C1917;
+  --color-charcoal-muted: #57534E;
+  --color-brand-red: #DC2626;
+  --color-brand-red-dark: #2B0A0A;
+  --color-brand-orange: #EA580C;
+  --color-brand-yellow: #FACC15;
   --font-heading: var(--font-heading), 'Montserrat', sans-serif;
   --font-sans: var(--font-sans), 'Inter', sans-serif;
 }
 
 :root {
-  --primary-green: #0B5D2E;
-  --deep-green: #063D1E;
-  --gold-accent: #D4A017;
-  --warm-cream: #FFFDF0;
-  --charcoal: #1F2933;
+  --primary-red: #DC2626;
+  --deep-red: #2B0A0A;
+  --dark-maroon: #1A0505;
+  --accent-orange: #EA580C;
+  --accent-yellow: #FACC15;
+  --warm-white: #FFFBF5;
+  --charcoal: #1C1917;
 }
 
 html {
@@ -33,56 +39,60 @@ html {
 }
 
 body {
-  background-color: #FFFDF0;
-  color: #1F2933;
+  background-color: #FFFBF5;
+  color: #1C1917;
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Red, Orange, Yellow Theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #063D1E;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #D4A017, #8C6A0E);
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #F2D675;
+  background: #1A0505;
 }
 
-/* Metallic Gold Gradients */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FACC15, #EA580C, #DC2626);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FDE047;
+}
+
+/* Red / Orange / Yellow Flame Gradients */
 .gold-gradient-bg {
-  background: linear-gradient(135deg, #F2D675 0%, #C8961A 50%, #8C6A0E 100%);
+  background: linear-gradient(135deg, #FACC15 0%, #EA580C 50%, #DC2626 100%);
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #F9E79F 0%, #E5B232 50%, #FAF0CA 100%);
+  background: linear-gradient(135deg, #FDE047 0%, #F97316 50%, #EF4444 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-border {
-  border-image: linear-gradient(135deg, #F2D675, #C8961A, #8C6A0E) 1;
+  border-image: linear-gradient(135deg, #FACC15, #EA580C, #DC2626) 1;
 }
 
-/* Gold Button Hover Shimmer */
+/* Button Shimmer with High-Impact Red-Orange-Yellow Energy */
 .btn-gold-shimmer {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #F2D675 0%, #C8961A 50%, #8C6A0E 100%);
-  color: #063D1E;
+  background: linear-gradient(135deg, #FACC15 0%, #EA580C 55%, #DC2626 100%);
+  color: #FFFFFF;
   font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 160, 23, 0.35);
+  box-shadow: 0 4px 18px rgba(234, 88, 12, 0.45);
 }
 
 .btn-gold-shimmer:hover {
-  box-shadow: 0 6px 25px rgba(212, 160, 23, 0.55);
+  box-shadow: 0 6px 25px rgba(220, 38, 38, 0.6);
   transform: translateY(-2px);
+  filter: brightness(1.05);
 }
 
 .btn-gold-shimmer::after {
@@ -101,66 +111,67 @@ body {
   left: 130%;
 }
 
-/* Outlined Gold Button */
+/* Outlined Red/Orange Button */
 .btn-gold-outline {
-  border: 2px solid #D4A017;
-  color: #F2D675;
-  background: rgba(6, 61, 30, 0.4);
+  border: 2px solid #EA580C;
+  color: #FACC15;
+  background: rgba(43, 10, 10, 0.6);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
 
 .btn-gold-outline:hover {
-  background: rgba(212, 160, 23, 0.15);
-  border-color: #F2D675;
+  background: rgba(234, 88, 12, 0.2);
+  border-color: #FACC15;
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.25);
+  box-shadow: 0 4px 20px rgba(234, 88, 12, 0.35);
 }
 
-/* Luxury Card Shadow & Hover */
+/* White Luxury Card with Orange/Red subtle border & glow */
 .luxury-card {
   background: #FFFFFF;
-  border: 1px solid rgba(212, 160, 23, 0.2);
+  border: 1px solid rgba(234, 88, 12, 0.22);
   border-radius: 1rem;
-  box-shadow: 0 10px 30px -5px rgba(11, 93, 46, 0.08), 0 0 1px 1px rgba(212, 160, 23, 0.1);
+  box-shadow: 0 10px 30px -5px rgba(220, 38, 38, 0.07), 0 0 1px 1px rgba(234, 88, 12, 0.12);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luxury-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(212, 160, 23, 0.5);
-  box-shadow: 0 20px 35px -10px rgba(11, 93, 46, 0.16), 0 0 0 1px rgba(212, 160, 23, 0.4);
+  border-color: rgba(234, 88, 12, 0.6);
+  box-shadow: 0 20px 35px -10px rgba(220, 38, 38, 0.18), 0 0 0 1px rgba(249, 115, 22, 0.45);
 }
 
-/* Green Luxury Card for Dark Sections */
+/* Dark Maroon / Crimson Luxury Card for Dark Sections */
 .luxury-card-green {
-  background: linear-gradient(160deg, #094a25 0%, #063D1E 100%);
-  border: 1px solid rgba(212, 160, 23, 0.3);
+  background: linear-gradient(160deg, #3A0B0B 0%, #1A0505 100%);
+  border: 1px solid rgba(249, 115, 22, 0.35);
   border-radius: 1rem;
-  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.55);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luxury-card-green:hover {
   transform: translateY(-6px);
-  border-color: #F2D675;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 160, 23, 0.2);
+  border-color: #FACC15;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.75), 0 0 15px rgba(234, 88, 12, 0.3);
 }
 
-/* Gold Divider Line */
+/* Red-Orange-Yellow Divider Line */
 .gold-divider {
   height: 2px;
-  background: linear-gradient(90deg, transparent, #D4A017, #F2D675, #D4A017, transparent);
+  background: linear-gradient(90deg, transparent, #DC2626, #EA580C, #FACC15, #EA580C, #DC2626, transparent);
 }
 
-/* Hero Background Skyline Silhouette Overlay */
+/* Hero Background Skyline Silhouette Overlay - Deep Red/Maroon with Warm Golden Glows */
 .hero-skyline-bg {
-  background-color: #063D1E;
-  background-image: 
-    radial-gradient(circle at 80% 20%, rgba(212, 160, 23, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(14, 115, 57, 0.25) 0%, transparent 60%),
-    linear-gradient(180deg, #042613 0%, #063D1E 45%, #0B5D2E 100%);
+  background-color: #1A0505;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(250, 204, 21, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.28) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(234, 88, 12, 0.12) 0%, transparent 65%),
+    linear-gradient(180deg, #120303 0%, #220606 45%, #380A0A 100%);
   position: relative;
 }
 
@@ -169,17 +180,22 @@ body {
   position: absolute;
   inset: 0;
   opacity: 0.08;
-  background-image: 
-    linear-gradient(to right, #D4A017 1px, transparent 1px),
-    linear-gradient(to bottom, #D4A017 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, #F97316 1px, transparent 1px),
+    linear-gradient(to bottom, #F97316 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
 }
 
 /* Keyframe animations */
 @keyframes floatSlow {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .animate-float-slow {
@@ -187,8 +203,15 @@ body {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 .animate-pulse-glow {

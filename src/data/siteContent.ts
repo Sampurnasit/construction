@@ -65,15 +65,22 @@ export const siteConfig = {
     }
   },
 
-  // Color Palette Tokens
+  // Color Palette Tokens (Red, Orange, Yellow, White)
   theme: {
-    primaryGreen: "#0B5D2E",
-    deepGreen: "#063D1E",
-    lightGreen: "#0E7339",
-    goldAccent: "#D4A017",
-    goldGradient: "linear-gradient(135deg, #F2D675 0%, #C8961A 50%, #8C6A0E 100%)",
-    warmCream: "#FFFDF0",
-    charcoal: "#1F2933",
+    primaryRed: "#DC2626",
+    deepRed: "#2B0A0A",
+    accentOrange: "#EA580C",
+    accentYellow: "#FACC15",
+    fireGradient: "linear-gradient(135deg, #FACC15 0%, #EA580C 50%, #DC2626 100%)",
+    warmWhite: "#FFFBF5",
+    charcoal: "#1C1917",
+    // Compatibility aliases
+    primaryGreen: "#DC2626",
+    deepGreen: "#2B0A0A",
+    lightGreen: "#EA580C",
+    goldAccent: "#F97316",
+    goldGradient: "linear-gradient(135deg, #FDE047 0%, #F97316 50%, #DC2626 100%)",
+    warmCream: "#FFFBF5",
   },
 
   // Trust Strip Animated Statistics

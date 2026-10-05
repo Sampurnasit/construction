@@ -11,7 +11,7 @@ export default function FloatingWhatsApp() {
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {/* Tooltip on hover */}
       {isHovered && (
-        <div className="hidden sm:block bg-[#063D1E] text-[#F2D675] text-xs font-bold py-1.5 px-3.5 rounded-full border border-[#D4A017] shadow-xl animate-in fade-in slide-in-from-right duration-200">
+        <div className="hidden sm:block bg-[#2B0A0A] text-[#FACC15] text-xs font-bold py-1.5 px-3.5 rounded-full border border-[#EA580C] shadow-xl animate-in fade-in slide-in-from-right duration-200">
           Chat with BSA Enterprise
         </div>
       )}

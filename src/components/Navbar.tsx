@@ -42,62 +42,62 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Notification Bar for Govt Contractor Trust */}
-      <div className="bg-[#042613] text-[#F2D675] text-xs py-2 px-4 border-b border-[#D4A017]/30 transition-all">
+      {/* Top Notification Bar for Govt Contractor Trust - Deep Red with Yellow & Orange highlights */}
+      <div className="bg-[#1A0505] text-[#FACC15] text-xs py-2 px-4 border-b border-[#EA580C]/30 transition-all">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 text-center sm:text-left">
-            <span className="inline-flex items-center gap-1 bg-[#0B5D2E] text-[#FFFDF0] text-[11px] font-semibold px-2 py-0.5 rounded-full border border-[#D4A017]/50">
-              <ShieldCheck className="w-3 h-3 text-[#F2D675]" /> Govt Registered
+            <span className="inline-flex items-center gap-1 bg-[#DC2626] text-white text-[11px] font-semibold px-2 py-0.5 rounded-full border border-[#FACC15]/50">
+              <ShieldCheck className="w-3 h-3 text-[#FACC15]" /> Govt Registered
             </span>
-            <span className="text-[#FFFDF0]/90 font-medium hidden md:inline">
+            <span className="text-white/90 font-medium hidden md:inline">
               Govt Civil Contractor &amp; General Order Supplier
             </span>
-            <span className="text-[#D4A017]/70 hidden md:inline">•</span>
-            <span className="text-[#FFFDF0]/80">Regent Colony, Kolkata - 700040</span>
+            <span className="text-[#EA580C] hidden md:inline">•</span>
+            <span className="text-white/80">Regent Colony, Kolkata - 700040</span>
           </div>
 
           <div className="flex items-center gap-4 text-[12px]">
             <a
               href={siteConfig.company.contact.phoneTel}
-              className="flex items-center gap-1.5 text-[#FFFDF0] hover:text-[#F2D675] transition-colors"
+              className="flex items-center gap-1.5 text-white hover:text-[#FACC15] transition-colors"
             >
-              <Phone className="w-3 h-3 text-[#F2D675]" />
+              <Phone className="w-3 h-3 text-[#FACC15]" />
               <span className="font-semibold">{siteConfig.company.contact.phoneFormatted}</span>
             </a>
-            <span className="text-[#D4A017]/40 hidden sm:inline">|</span>
+            <span className="text-[#EA580C]/50 hidden sm:inline">|</span>
             <a
               href={siteConfig.company.contact.emailMailto}
-              className="hidden sm:flex items-center gap-1.5 text-[#FFFDF0]/90 hover:text-[#F2D675] transition-colors"
+              className="hidden sm:flex items-center gap-1.5 text-white/90 hover:text-[#FACC15] transition-colors"
             >
-              <Mail className="w-3 h-3 text-[#F2D675]" />
+              <Mail className="w-3 h-3 text-[#FACC15]" />
               <span>{siteConfig.company.contact.email}</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Sticky Navbar */}
+      {/* Main Sticky Navbar - Dark Crimson Red with Golden Yellow & Orange Accents */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#063D1E]/95 backdrop-blur-md shadow-xl py-2.5 border-b border-[#D4A017]/40"
-            : "bg-[#063D1E] py-3.5 border-b border-[#D4A017]/20"
-        }`}
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
+            ? "bg-[#200505]/95 backdrop-blur-md shadow-xl py-2.5 border-b border-[#EA580C]/40"
+            : "bg-[#200505] py-3.5 border-b border-[#EA580C]/25"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Brand Logo & Name */}
             <Link
               href="#hero"
-              className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#D4A017] rounded-lg p-1"
+              className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#FACC15] rounded-lg p-1"
             >
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 transition-transform group-hover:scale-105">
                 <Image
-                  src="/logo.png"
+                  src="/bsa-logo.png"
                   alt="BSA Enterprise Logo"
                   fill
                   className="object-contain"
                   priority
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col">
@@ -105,12 +105,12 @@ export default function Navbar() {
                   <span className="font-['Montserrat',sans-serif] font-black text-xl sm:text-2xl tracking-wider text-white">
                     BSA
                   </span>
-                  <span className="font-['Montserrat',sans-serif] font-bold text-lg sm:text-xl tracking-widest text-[#F2D675]">
+                  <span className="font-['Montserrat',sans-serif] font-bold text-lg sm:text-xl tracking-widest text-[#FACC15]">
                     ENTERPRISE
                   </span>
                 </div>
                 <span className="text-[10px] sm:text-[11px] font-medium tracking-wide text-white/80 uppercase">
-                  Govt Civil Contractor & General Order Supplier
+                  Govt Civil Contractor &amp; General Order Supplier
                 </span>
               </div>
             </Link>
@@ -123,11 +123,10 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
-                      isActive
-                        ? "text-[#F2D675] bg-[#0B5D2E]/80 border-b-2 border-[#D4A017] shadow-sm font-semibold"
-                        : "text-white/85 hover:text-[#F2D675] hover:bg-white/5"
-                    }`}
+                    className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${isActive
+                        ? "text-[#FACC15] bg-[#DC2626]/80 border-b-2 border-[#FACC15] shadow-sm font-semibold"
+                        : "text-white/90 hover:text-[#FACC15] hover:bg-white/10"
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -139,17 +138,17 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <a
                 href="#contact"
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold btn-gold-shimmer"
+                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold btn-gold-shimmer text-white shadow-lg"
               >
                 <span>Get a Quote</span>
-                <ArrowUpRight className="w-4 h-4 text-[#063D1E]" />
+                <ArrowUpRight className="w-4 h-4 text-white" />
               </a>
 
               {/* Mobile Menu Button */}
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg text-[#F2D675] hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#D4A017]"
+                className="lg:hidden p-2 rounded-lg text-[#FACC15] hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#FACC15]"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
               >
@@ -165,14 +164,14 @@ export default function Navbar() {
 
         {/* Mobile Dropdown Drawer */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#063D1E] border-t border-[#D4A017]/30 px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-in slide-in-from-top duration-300">
-            <div className="grid grid-cols-2 gap-2 pt-1 pb-2 border-b border-[#D4A017]/20">
-              <div className="bg-[#042613] p-2.5 rounded-lg border border-[#D4A017]/30 text-center">
-                <span className="text-[10px] text-[#F2D675] font-semibold block uppercase">Govt Contractor</span>
+          <div className="lg:hidden bg-[#200505] border-t border-[#EA580C]/30 px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-in slide-in-from-top duration-300">
+            <div className="grid grid-cols-2 gap-2 pt-1 pb-2 border-b border-[#EA580C]/20">
+              <div className="bg-[#1A0505] p-2.5 rounded-lg border border-[#EA580C]/30 text-center">
+                <span className="text-[10px] text-[#FACC15] font-semibold block uppercase">Govt Contractor</span>
                 <span className="text-xs text-white font-semibold">Civil &amp; Supply</span>
               </div>
-              <div className="bg-[#042613] p-2.5 rounded-lg border border-[#D4A017]/30 text-center">
-                <span className="text-[10px] text-[#F2D675] font-semibold block uppercase">Founder</span>
+              <div className="bg-[#1A0505] p-2.5 rounded-lg border border-[#EA580C]/30 text-center">
+                <span className="text-[10px] text-[#FACC15] font-semibold block uppercase">Founder</span>
                 <span className="text-xs text-white font-semibold">{siteConfig.company.founder}</span>
               </div>
             </div>
@@ -183,10 +182,10 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-3 py-2.5 rounded-lg text-base font-medium text-white hover:text-[#F2D675] hover:bg-[#0B5D2E]/50 transition-colors flex items-center justify-between"
+                  className="px-3 py-2.5 rounded-lg text-base font-medium text-white hover:text-[#FACC15] hover:bg-[#DC2626]/40 transition-colors flex items-center justify-between"
                 >
                   <span>{link.label}</span>
-                  <span className="text-xs text-[#D4A017]">→</span>
+                  <span className="text-xs text-[#EA580C]">→</span>
                 </Link>
               ))}
             </nav>
@@ -195,13 +194,13 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full text-center py-3 rounded-lg text-sm font-bold btn-gold-shimmer"
+                className="w-full text-center py-3 rounded-lg text-sm font-bold btn-gold-shimmer text-white"
               >
                 Request a Free Quotation
               </a>
               <a
                 href={siteConfig.company.contact.phoneTel}
-                className="w-full text-center py-2.5 rounded-lg text-sm font-semibold border border-[#D4A017] text-[#F2D675] hover:bg-[#D4A017]/10 flex items-center justify-center gap-2"
+                className="w-full text-center py-2.5 rounded-lg text-sm font-semibold border border-[#EA580C] text-[#FACC15] hover:bg-[#EA580C]/15 flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call {siteConfig.company.contact.phoneFormatted}</span>

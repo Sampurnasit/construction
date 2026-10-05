@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0B5D2E",
+  themeColor: "#DC2626",
   width: "device-width",
   initialScale: 1,
 };
@@ -78,11 +78,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico?v=2" },
+      { url: "/favicon.png?v=2", type: "image/png" },
+      { url: "/bsa-logo.png", sizes: "192x192", type: "image/png" },
     ],
-    apple: [{ url: "/logo.png" }],
+    apple: [{ url: "/bsa-logo.png" }],
   },
   robots: {
     index: true,
@@ -140,7 +140,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#FFFDF0] text-[#1F2933] antialiased selection:bg-[#D4A017] selection:text-[#063D1E]">
+      <body className="min-h-screen bg-[#FFFBF5] text-[#1C1917] antialiased selection:bg-[#FACC15] selection:text-[#7F1D1D]">
         {children}
       </body>
     </html>
