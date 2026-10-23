@@ -3,11 +3,11 @@ import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import ProcessTimeline from "@/components/ProcessTimeline";
 import ProjectsGallery from "@/components/ProjectsGallery";
 import Credentials from "@/components/Credentials";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
@@ -30,20 +30,20 @@ export default function Home() {
         {/* 5. Why Choose Us (6 Points on Rich Dark Maroon & Red) */}
         <WhyChooseUs />
 
-        {/* 6. Systematic 5-Step Process Timeline */}
-        <ProcessTimeline />
-
-        {/* 7. Projects & Execution Gallery with Interactive Lightbox */}
+        {/* 6. Projects & Execution Gallery with Interactive Lightbox */}
         <ProjectsGallery />
 
-        {/* 8. Official Credentials & Verifiable GST Certificate */}
+        {/* 7. Official Credentials & Verifiable GST Certificate */}
         <Credentials />
 
-        {/* 9. Frequently Asked Questions */}
+        {/* 8. Frequently Asked Questions */}
         <FAQSection />
 
-        {/* 10. Contact Section with Validated Form & Google Map */}
+        {/* 9. Contact Section with Validated Form & Google Map */}
         <ContactSection />
+
+        {/* 10. Client & Government Endorsements Testimonials */}
+        <Testimonials />
       </main>
 
       {/* 11. Red-Orange-Yellow Styled Footer */}

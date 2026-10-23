@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/siteContent";
-import { Phone, Menu, X, ArrowUpRight, ShieldCheck, Mail } from "lucide-react";
+import { Phone, Menu, X, ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,40 +42,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Notification Bar for Govt Contractor Trust - Deep Red with Yellow & Orange highlights */}
-      <div className="bg-[#1A0505] text-[#FACC15] text-xs py-2 px-4 border-b border-[#EA580C]/30 transition-all">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-center sm:text-left">
-            <span className="inline-flex items-center gap-1 bg-[#DC2626] text-white text-[11px] font-semibold px-2 py-0.5 rounded-full border border-[#FACC15]/50">
-              <ShieldCheck className="w-3 h-3 text-[#FACC15]" /> Govt Registered
-            </span>
-            <span className="text-white/90 font-medium hidden md:inline">
-              Govt Civil Contractor &amp; General Order Supplier
-            </span>
-            <span className="text-[#EA580C] hidden md:inline">•</span>
-            <span className="text-white/80">Regent Colony, Kolkata - 700040</span>
-          </div>
-
-          <div className="flex items-center gap-4 text-[12px]">
-            <a
-              href={siteConfig.company.contact.phoneTel}
-              className="flex items-center gap-1.5 text-white hover:text-[#FACC15] transition-colors"
-            >
-              <Phone className="w-3 h-3 text-[#FACC15]" />
-              <span className="font-semibold">{siteConfig.company.contact.phoneFormatted}</span>
-            </a>
-            <span className="text-[#EA580C]/50 hidden sm:inline">|</span>
-            <a
-              href={siteConfig.company.contact.emailMailto}
-              className="hidden sm:flex items-center gap-1.5 text-white/90 hover:text-[#FACC15] transition-colors"
-            >
-              <Mail className="w-3 h-3 text-[#FACC15]" />
-              <span>{siteConfig.company.contact.email}</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Sticky Navbar - Dark Crimson Red with Golden Yellow & Orange Accents */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
@@ -83,12 +49,12 @@ export default function Navbar() {
             : "bg-[#200505] py-3.5 border-b border-[#EA580C]/25"
           }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between">
-            {/* Brand Logo & Name */}
+            {/* Brand Logo & Name - shifted left with mr-auto to give ample space before Home */}
             <Link
               href="#hero"
-              className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#FACC15] rounded-lg p-1"
+              className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#FACC15] rounded-lg p-1 shrink-0 mr-auto lg:mr-8 xl:mr-14"
             >
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 transition-transform group-hover:scale-105">
                 <Image
@@ -116,14 +82,14 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+            <nav className="hidden lg:flex items-center gap-0.5 xl:gap-2 mr-3 lg:mr-6">
               {siteConfig.navLinks.map((link) => {
                 const isActive = activeSection === link.href.substring(1);
                 return (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${isActive
+                    className={`px-2 xl:px-3 py-1.5 rounded-md text-xs xl:text-sm font-medium whitespace-nowrap transition-all duration-200 ${isActive
                         ? "text-[#FACC15] bg-[#DC2626]/80 border-b-2 border-[#FACC15] shadow-sm font-semibold"
                         : "text-white/90 hover:text-[#FACC15] hover:bg-white/10"
                       }`}
@@ -135,7 +101,7 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop CTA & Mobile Toggle */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 shrink-0">
               <a
                 href="#contact"
                 className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold btn-gold-shimmer text-white shadow-lg"
@@ -184,7 +150,7 @@ export default function Navbar() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="px-3 py-2.5 rounded-lg text-base font-medium text-white hover:text-[#FACC15] hover:bg-[#DC2626]/40 transition-colors flex items-center justify-between"
                 >
-                  <span>{link.label}</span>
+                  <span className="whitespace-nowrap">{link.label}</span>
                   <span className="text-xs text-[#EA580C]">→</span>
                 </Link>
               ))}

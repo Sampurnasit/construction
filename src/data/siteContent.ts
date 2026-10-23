@@ -27,6 +27,18 @@ export interface ServiceItem {
   tag: string;
 }
 
+export interface TestimonialItem {
+  id: string;
+  name: string;
+  designation: string;
+  organization: string;
+  project: string;
+  location: string;
+  quote: string;
+  rating: number;
+  category: 'civil' | 'building' | 'materials' | 'municipal';
+}
+
 export const siteConfig = {
   // Brand & Business Details
   company: {
@@ -118,10 +130,9 @@ export const siteConfig = {
     { label: "About Us", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Why Us", href: "#why-us" },
-    { label: "Process", href: "#process" },
     { label: "Projects", href: "#projects" },
     { label: "Credentials", href: "#credentials" },
-    { label: "Contact", href: "#contact" }
+    { label: "Testimonials", href: "#testimonials" }
   ],
 
   // Core Services
@@ -218,7 +229,66 @@ export const siteConfig = {
     }
   ],
 
-  // 5-Step Execution Process
+  // Client & Institutional Testimonials
+  testimonials: [
+    {
+      id: "t1",
+      name: "Er. A. K. Banerjee",
+      designation: "Executive Project Lead",
+      organization: "Municipal Infrastructure Development",
+      project: "Urban Arterial RCC Roadway & Precast Culverts",
+      location: "Kolkata Metropolitan Area",
+      quote: "BSA Enterprise demonstrated exceptional engineering discipline on the RCC roadway and storm culvert project. Their high-capacity mechanized concrete pavers and strict slump-test records resulted in flawless execution with zero handover delays.",
+      rating: 5,
+      category: "civil"
+    },
+    {
+      id: "t2",
+      name: "Debashis Mukherjee",
+      designation: "Managing Director",
+      organization: "Eastern Commercial Real Estate Group",
+      project: "G+7 Commercial Structural RCC Framework",
+      location: "South Kolkata, West Bengal",
+      quote: "Sayantan Das and the BSA Enterprise crew bring rare professional integrity to civil contracting. Their site safety measures, certified shuttering, and transparent BOQ billing made them our top choice institutional contractor.",
+      rating: 5,
+      category: "building"
+    },
+    {
+      id: "t3",
+      name: "Subrata Roy",
+      designation: "Chief Materials Officer",
+      organization: "Bengal Infrastructure Consortium",
+      project: "Primary TMT Rebar & Grade 53 Cement Supply",
+      location: "Central Kolkata Logistics Depot",
+      quote: "Finding a general order supplier in Kolkata who reliably delivers tested Fe 550D TMT rebars with authentic mill test certificates on short notice was critical for our project timelines. BSA Enterprise delivered every consignment on-schedule.",
+      rating: 5,
+      category: "materials"
+    },
+    {
+      id: "t4",
+      name: "P. R. Chakraborty",
+      designation: "Principal Civil Consultant",
+      organization: "Urban Drainage & Sanitation Oversight",
+      project: "Sub-Surface Drainage & Cast-in-Situ Box Culverts",
+      location: "Tollygunge - Jadavpur Belt",
+      quote: "Superb execution on underground drainage lines under challenging urban conditions. Their trench shoring and pump dewatering protocols kept surrounding properties safe, and the final flow test cleared with flying colors.",
+      rating: 5,
+      category: "municipal"
+    },
+    {
+      id: "t5",
+      name: "S. K. Ganguly",
+      designation: "Senior Project Architect",
+      organization: "Institutional Works Directorate",
+      project: "Campus Earthwork, Foundation Piling & Site Grading",
+      location: "New Town - Rajarhat Zone",
+      quote: "Their survey teams provided laser-guided grading and precision piling documentation. Sayantan's hands-on presence on the ground ensures instantaneous resolution of site anomalies. Highly recommended.",
+      rating: 5,
+      category: "civil"
+    }
+  ] as TestimonialItem[],
+
+  // 5-Step Execution Process (Retained for backwards compatibility)
   process: [
     {
       step: "01",
