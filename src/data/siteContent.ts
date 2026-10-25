@@ -131,8 +131,8 @@ export const siteConfig = {
     { label: "Services", href: "#services" },
     { label: "Why Us", href: "#why-us" },
     { label: "Projects", href: "#projects" },
-    { label: "Credentials", href: "#credentials" },
-    { label: "Testimonials", href: "#testimonials" }
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Credentials", href: "#credentials" }
   ],
 
   // Core Services

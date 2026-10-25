@@ -33,17 +33,17 @@ export default function Home() {
         {/* 6. Projects & Execution Gallery with Interactive Lightbox */}
         <ProjectsGallery />
 
-        {/* 7. Official Credentials & Verifiable GST Certificate */}
+        {/* 7. Client & Government Endorsements Testimonials & Write a Review */}
+        <Testimonials />
+
+        {/* 8. Official Credentials & Verifiable GST Certificate */}
         <Credentials />
 
-        {/* 8. Frequently Asked Questions */}
+        {/* 9. Frequently Asked Questions */}
         <FAQSection />
 
-        {/* 9. Contact Section with Validated Form & Google Map */}
+        {/* 10. Contact Section with Validated Form & Google Map */}
         <ContactSection />
-
-        {/* 10. Client & Government Endorsements Testimonials */}
-        <Testimonials />
       </main>
 
       {/* 11. Red-Orange-Yellow Styled Footer */}
