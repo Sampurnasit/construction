@@ -108,8 +108,22 @@ export default function Services() {
               {/* Bottom Inquire Button */}
               <div className="pt-6 border-t border-[#EA580C]/20 flex items-center justify-between">
                 <a
-                  href={`#contact?service=${encodeURIComponent(service.title)}`}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#1C1917] group-hover:text-[#EA580C] transition-colors"
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (typeof window !== "undefined") {
+                      window.dispatchEvent(
+                        new CustomEvent("select-service", {
+                          detail: { service: service.title },
+                        })
+                      );
+                      const contactEl = document.getElementById("contact");
+                      if (contactEl) {
+                        contactEl.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#DC2626] hover:text-[#EA580C] group-hover:text-[#EA580C] transition-colors cursor-pointer"
                 >
                   <span>Inquire for {service.title}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />

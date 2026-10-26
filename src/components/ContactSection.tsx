@@ -26,15 +26,46 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Check URL query parameters for pre-selected service
+  // Check URL query parameters or custom event for pre-selected service
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      const s = params.get("service");
-      if (s) {
-        setFormData((prev) => ({ ...prev, service: s }));
+    const handleServiceSelect = (e: Event) => {
+      const customEvent = e as CustomEvent<{ service: string }>;
+      if (customEvent.detail?.service) {
+        setFormData((prev) => ({ ...prev, service: customEvent.detail.service }));
       }
-    }
+    };
+
+    window.addEventListener("select-service", handleServiceSelect);
+
+    const parseServiceFromUrl = () => {
+      if (typeof window === "undefined") return;
+
+      // 1. Check search params: ?service=...
+      const searchParams = new URLSearchParams(window.location.search);
+      const sSearch = searchParams.get("service");
+      if (sSearch) {
+        setFormData((prev) => ({ ...prev, service: decodeURIComponent(sSearch) }));
+        return;
+      }
+
+      // 2. Check hash query: #contact?service=...
+      if (window.location.hash.includes("?")) {
+        const hashQuery = window.location.hash.split("?")[1];
+        const hashParams = new URLSearchParams(hashQuery);
+        const sHash = hashParams.get("service");
+        if (sHash) {
+          setFormData((prev) => ({ ...prev, service: decodeURIComponent(sHash) }));
+        }
+      }
+    };
+
+    parseServiceFromUrl();
+    window.addEventListener("hashchange", parseServiceFromUrl);
+
+    return () => {
+      window.removeEventListener("select-service", handleServiceSelect);
+      window.removeEventListener("hashchange", parseServiceFromUrl);
+    };
   }, []);
 
   const validate = () => {
@@ -86,7 +117,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white relative overflow-hidden">
+    <section id="contact" className="py-20 bg-white relative overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
