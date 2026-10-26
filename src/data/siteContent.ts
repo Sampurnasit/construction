@@ -17,6 +17,12 @@ export interface ProjectItem {
   status: 'Completed' | 'In Progress' | 'Quality Assured';
 }
 
+export interface GalleryImage {
+  id: string;
+  src: string;
+  alt: string;
+}
+
 export interface ServiceItem {
   id: string;
   title: string;
@@ -130,7 +136,7 @@ export const siteConfig = {
     { label: "About Us", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Why Us", href: "#why-us" },
-    { label: "Projects", href: "#projects" },
+    { label: "Gallery", href: "#gallery" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Credentials", href: "#credentials" }
   ],
@@ -316,6 +322,24 @@ export const siteConfig = {
       desc: "Comprehensive punch-list clearance, joint measurement sign-off, statutory documentation, and handover."
     }
   ],
+
+  // Real On-Site Work Gallery Images
+  galleryImages: [
+    { id: "img-1", src: "/images/img1.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 1" },
+    { id: "img-2", src: "/images/img2.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 2" },
+    { id: "img-3", src: "/images/img3.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 3" },
+    { id: "img-4", src: "/images/img4.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 4" },
+    { id: "img-5", src: "/images/img5.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 5" },
+    { id: "img-6", src: "/images/img6.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 6" },
+    { id: "img-7", src: "/images/img7.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 7" },
+    { id: "img-8", src: "/images/img8.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 8" },
+    { id: "img-9", src: "/images/img9.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 9" },
+    { id: "img-10", src: "/images/img10.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 10" },
+    { id: "img-11", src: "/images/img11.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 11" },
+    { id: "img-12", src: "/images/img12.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 12" },
+    { id: "img-13", src: "/images/img13.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 13" },
+    { id: "img-14", src: "/images/img14.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 14" },
+  ] as GalleryImage[],
 
   // Projects / Portfolio Gallery
   projects: [
