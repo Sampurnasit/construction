@@ -59,20 +59,21 @@ export default function Services() {
               key={service.id}
               className="luxury-card p-8 sm:p-10 flex flex-col justify-between group hover:border-[#EA580C] transition-all relative overflow-hidden"
             >
-              {/* Corner Watermark Number */}
-              <div className="absolute top-4 right-6 font-['Montserrat',sans-serif] font-black text-6xl text-[#DC2626]/5 select-none pointer-events-none group-hover:text-[#EA580C]/15 transition-colors">
-                0{index + 1}
-              </div>
-
               <div>
-                {/* Top Icon & Badge Row */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FACC15] via-[#EA580C] to-[#DC2626] p-0.5 shadow-md group-hover:scale-105 transition-transform">
-                    <div className="w-full h-full bg-[#FFFBF5] rounded-[14px] flex items-center justify-center">
-                      {getIcon(service.icon)}
+                {/* Top Icon, Index & Badge Row (Clean in-flow layout without any overlap) */}
+                <div className="flex items-center justify-between gap-3 mb-6">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#FACC15] via-[#EA580C] to-[#DC2626] p-0.5 shadow-md group-hover:scale-105 transition-transform shrink-0">
+                      <div className="w-full h-full bg-[#FFFBF5] rounded-[14px] flex items-center justify-center">
+                        {getIcon(service.icon)}
+                      </div>
                     </div>
+                    <span className="font-['Montserrat',sans-serif] font-black text-2xl sm:text-3xl text-[#EA580C]/40 group-hover:text-[#DC2626] transition-colors select-none tracking-tight">
+                      0{index + 1}
+                    </span>
                   </div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EA580C]/10 text-[#EA580C] border border-[#EA580C]/25">
+
+                  <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EA580C]/10 text-[#EA580C] border border-[#EA580C]/25 shrink-0 whitespace-nowrap">
                     {service.tag}
                   </span>
                 </div>

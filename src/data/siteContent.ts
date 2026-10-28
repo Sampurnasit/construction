@@ -73,7 +73,7 @@ export const siteConfig = {
       email: "bsaenterprise17@gmail.com",
       emailMailto: "mailto:bsaenterprise17@gmail.com",
       whatsappNumber: "919330967405",
-      whatsappLink: "https://wa.me/919330967405?text=Hello%20BSA%20Enterprise%2C%20I%20would%20like%20to%20inquire%20about%20your%20Civil%20Contracting%20and%20Supply%20services.",
+      whatsappLink: "https://wa.me/919330967405?text=Hello%20BSA%20Enterprise%2C%20I%20would%20like%20to%20inquire%20about%20your%20Civil%20Contractor%20and%20Supply%20services.",
       workingHours: "Monday – Saturday: 9:00 AM – 7:30 PM",
       sundayNote: "Sunday: Closed (Emergency Site Inquiries On-Call)"
     },
@@ -145,7 +145,7 @@ export const siteConfig = {
   services: [
     {
       id: "civil-contracting",
-      title: "Civil Contracting",
+      title: "Civil Contractor",
       tag: "Govt & Institutional Grade",
       icon: "HardHat",
       shortDesc: "Comprehensive civil infrastructure execution conforming strictly to municipal, state, and central engineering specifications.",

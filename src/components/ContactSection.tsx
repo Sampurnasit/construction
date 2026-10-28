@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   AlertCircle,
   MessageSquare,
+  MessageCircle,
 } from "lucide-react";
 
 export default function ContactSection() {
@@ -18,13 +19,14 @@ export default function ContactSection() {
     name: "",
     phone: "",
     email: "",
-    service: "Civil Contracting",
+    service: "Civil Contractor",
     message: "",
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedWhatsAppUrl, setSubmittedWhatsAppUrl] = useState("");
 
   // Check URL query parameters or custom event for pre-selected service
   useEffect(() => {
@@ -101,19 +103,46 @@ export default function ContactSection() {
 
     setIsSubmitting(true);
 
-    // Simulate submission / client feedback
+    const messageLines = [
+      "🏗️ *NEW QUOTATION REQUEST - BSA ENTERPRISE*",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━",
+      `👤 *Name / Entity:* ${formData.name.trim()}`,
+      `📞 *Contact Number:* ${formData.phone.trim()}`,
+      `✉️ *Email Address:* ${formData.email.trim()}`,
+      `🏢 *Service Required:* ${formData.service}`,
+      `📋 *Project Scope / Requirements:*`,
+      formData.message.trim(),
+      "━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "Sent via BSA Enterprise Official Website",
+    ];
+
+    const messageText = messageLines.join("\n");
+    const targetWhatsApp = siteConfig.company.contact.whatsappNumber || "919330967405";
+    const whatsappUrl = `https://wa.me/${targetWhatsApp}?text=${encodeURIComponent(messageText)}`;
+
+    setSubmittedWhatsAppUrl(whatsappUrl);
+
+    // Synchronously try to open WhatsApp in a new window/tab
+    const wpWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-      // Reset after showing feedback
+
+      // If popup was blocked or mobile browser requires direct navigation, redirect current window
+      if (!wpWindow || wpWindow.closed || typeof wpWindow.closed === "undefined") {
+        window.location.href = whatsappUrl;
+      }
+
+      // Reset form values
       setFormData({
         name: "",
         phone: "",
         email: "",
-        service: "Civil Contracting",
+        service: "Civil Contractor",
         message: "",
       });
-    }, 900);
+    }, 600);
   };
 
   return (
@@ -147,25 +176,36 @@ export default function ContactSection() {
                 Request a Free Quotation
               </h3>
               <p className="text-xs sm:text-sm text-[#57534E] mt-1">
-                Fill out the specifications below. Our founder &amp; engineering desk will respond within 24 hours.
+                Fill out the project specifications below to connect directly with Sayantan Das on WhatsApp with your complete details.
               </p>
             </div>
 
             {isSubmitted ? (
               <div className="p-8 rounded-xl bg-[#2B0A0A] text-white text-center space-y-4 border border-[#FACC15] animate-in fade-in zoom-in duration-300">
-                <div className="w-16 h-16 rounded-full bg-[#DC2626] text-[#FACC15] border-2 border-[#FACC15] mx-auto flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-[#25D366] text-white border-2 border-[#FACC15] mx-auto flex items-center justify-center shadow-lg">
                   <CheckCircle2 className="w-9 h-9" />
                 </div>
                 <h4 className="font-['Montserrat',sans-serif] font-bold text-2xl text-[#FACC15]">
-                  Enquiry Received Successfully!
+                  Quotation Details Prepared!
                 </h4>
                 <p className="text-sm text-white/90 max-w-md mx-auto leading-relaxed">
-                  Thank you for reaching out to BSA Enterprise. Sayantan Das and our technical team will review your project details and get back to you shortly.
+                  Your project details have been formatted and directed to Sayantan Das on WhatsApp. If WhatsApp did not open automatically, click the button below:
                 </p>
-                <div className="pt-3">
+                <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  {submittedWhatsAppUrl && (
+                    <a
+                      href={submittedWhatsAppUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-xs sm:text-sm font-bold bg-[#25D366] hover:bg-[#20ba5a] text-white transition-all shadow-md active:scale-95"
+                    >
+                      <MessageCircle className="w-4 h-4 fill-white stroke-[#25D366]" />
+                      <span>Open WhatsApp Chat</span>
+                    </a>
+                  )}
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="px-6 py-2.5 rounded-lg text-xs font-bold btn-gold-shimmer text-white cursor-pointer shadow-md"
+                    className="px-6 py-3 rounded-lg text-xs sm:text-sm font-bold btn-gold-outline text-white cursor-pointer shadow-md"
                   >
                     Send Another Enquiry
                   </button>
@@ -256,7 +296,7 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-[#EA580C]/40 text-sm text-[#1C1917] bg-[#FFFBF5] focus:outline-none focus:ring-2 focus:ring-[#DC2626] focus:border-[#DC2626] transition-all"
                   >
-                    <option value="Civil Contracting">Civil Contracting (Roads, Drainage, Concrete)</option>
+                    <option value="Civil Contractor">Civil Contractor (Roads, Drainage, Concrete)</option>
                     <option value="General Order Supply">General Order Supply (TMT Steel, Cement, Safety)</option>
                     <option value="Building Construction">Building Construction (Turnkey RCC Structures)</option>
                     <option value="Trusted Partnership">Govt Tender Bid / Institutional Partnership</option>
@@ -295,11 +335,12 @@ export default function ContactSection() {
                   className="w-full py-4 rounded-xl text-sm font-bold btn-gold-shimmer text-white flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-lg"
                 >
                   {isSubmitting ? (
-                    <span>Processing Submission...</span>
+                    <span>Opening WhatsApp with your details...</span>
                   ) : (
                     <>
-                      <span>Submit Official Quotation Request</span>
-                      <Send className="w-4 h-4 text-white" />
+                      <MessageCircle className="w-5 h-5 fill-white stroke-transparent shrink-0" />
+                      <span>Submit &amp; Request Quote on WhatsApp</span>
+                      <Send className="w-4 h-4 text-white shrink-0" />
                     </>
                   )}
                 </button>
