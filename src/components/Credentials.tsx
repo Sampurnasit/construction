@@ -47,23 +47,23 @@ export default function Credentials() {
         {/* Central Credentials Certificate Showcase */}
         <div className="max-w-4xl mx-auto">
           {/* Certificate-style Container */}
-          <div className="relative rounded-2xl bg-white p-2 border-2 border-[#EA580C] shadow-2xl overflow-hidden">
+          <div className="relative rounded-2xl bg-white p-1.5 sm:p-2 border-2 border-[#EA580C] shadow-2xl overflow-hidden">
             
             {/* Inner Border Frame */}
-            <div className="border border-[#EA580C]/40 rounded-xl p-6 sm:p-10 bg-gradient-to-b from-white via-[#FFFBF5] to-white relative">
+            <div className="border border-[#EA580C]/40 rounded-xl p-3.5 xs:p-5 sm:p-10 bg-gradient-to-b from-white via-[#FFFBF5] to-white relative">
               
               {/* Decorative Corner Seals */}
-              <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-[#EA580C]" />
-              <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-[#EA580C]" />
-              <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-[#EA580C]" />
-              <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-[#EA580C]" />
+              <div className="absolute top-2 left-2 sm:top-4 sm:left-4 w-4 h-4 sm:w-6 sm:h-6 border-t-2 border-l-2 border-[#EA580C]" />
+              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 w-4 h-4 sm:w-6 sm:h-6 border-t-2 border-r-2 border-[#EA580C]" />
+              <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 w-4 h-4 sm:w-6 sm:h-6 border-b-2 border-l-2 border-[#EA580C]" />
+              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 w-4 h-4 sm:w-6 sm:h-6 border-b-2 border-r-2 border-[#EA580C]" />
 
               {/* Certificate Header */}
-              <div className="text-center pb-6 border-b border-[#EA580C]/30">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#DC2626] border-2 border-[#FACC15] shadow-lg mb-3">
-                  <Award className="w-8 h-8 text-[#FACC15]" />
+              <div className="text-center pb-5 sm:pb-6 border-b border-[#EA580C]/30">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#DC2626] border-2 border-[#FACC15] shadow-lg mb-2 sm:mb-3">
+                  <Award className="w-6 h-6 sm:w-8 sm:h-8 text-[#FACC15]" />
                 </div>
-                <h3 className="font-['Montserrat',sans-serif] font-black text-2xl sm:text-3xl text-[#1C1917] tracking-wide uppercase">
+                <h3 className="font-['Montserrat',sans-serif] font-black text-xl sm:text-3xl text-[#1C1917] tracking-wide uppercase">
                   Government Registered Contractor
                 </h3>
                 <p className="text-xs sm:text-sm font-semibold text-[#EA580C] tracking-wider uppercase mt-1">
@@ -72,20 +72,20 @@ export default function Credentials() {
               </div>
 
               {/* GSTIN Spotlight Box */}
-              <div className="my-8 p-5 sm:p-6 rounded-xl bg-gradient-to-r from-[#2B0A0A] via-[#3B0A0A] to-[#1A0505] text-white border border-[#EA580C] shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-center sm:text-left">
-                  <span className="text-[11px] font-bold text-[#FACC15] uppercase tracking-wider block">
+              <div className="my-6 sm:my-8 p-4 sm:p-6 rounded-xl bg-gradient-to-r from-[#2B0A0A] via-[#3B0A0A] to-[#1A0505] text-white border border-[#EA580C] shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="text-center sm:text-left min-w-0 max-w-full">
+                  <span className="text-[10px] sm:text-[11px] font-bold text-[#FACC15] uppercase tracking-wider block">
                     Goods &amp; Services Tax Identification Number (GSTIN)
                   </span>
-                  <div className="font-mono font-bold text-2xl sm:text-3xl text-white tracking-widest mt-1">
+                  <div className="font-mono font-bold text-lg xs:text-2xl sm:text-3xl text-white tracking-wider sm:tracking-widest mt-1 break-all select-all">
                     {siteConfig.company.gstNo}
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-center">
                   <button
                     onClick={handleCopyGST}
-                    className="px-4 py-2.5 rounded-lg bg-[#FACC15] hover:bg-[#FDE047] text-[#1A0505] font-bold text-xs flex items-center gap-2 transition-all shadow cursor-pointer"
+                    className="flex-1 sm:flex-initial px-4 py-2.5 rounded-lg bg-[#FACC15] hover:bg-[#FDE047] text-[#1A0505] font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow cursor-pointer whitespace-nowrap"
                   >
                     {copied ? (
                       <>
@@ -104,7 +104,7 @@ export default function Credentials() {
                     href="https://services.gst.gov.in/services/searchtpbypan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-2.5 rounded-lg border border-[#EA580C] text-[#FACC15] hover:bg-white/10 font-medium text-xs flex items-center gap-1.5 transition-colors"
+                    className="flex-1 sm:flex-initial px-3.5 py-2.5 rounded-lg border border-[#EA580C] text-[#FACC15] hover:bg-white/10 font-medium text-xs flex items-center justify-center gap-1.5 transition-colors whitespace-nowrap"
                   >
                     <span>Verify</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -113,30 +113,30 @@ export default function Credentials() {
               </div>
 
               {/* Legal Details Table */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-8">
-                <div className="p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex items-center justify-between">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-sm mb-6 sm:mb-8">
+                <div className="p-3 sm:p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                   <span className="text-xs text-[#57534E] font-medium">Legal Name:</span>
                   <span className="font-bold text-[#1C1917]">{siteConfig.company.name}</span>
                 </div>
 
-                <div className="p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex items-center justify-between">
+                <div className="p-3 sm:p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                   <span className="text-xs text-[#57534E] font-medium">Founder / Proprietor:</span>
                   <span className="font-bold text-[#1C1917]">{siteConfig.company.founder}</span>
                 </div>
 
-                <div className="p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex items-center justify-between">
+                <div className="p-3 sm:p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                   <span className="text-xs text-[#57534E] font-medium">Principal Place of Business:</span>
-                  <span className="font-bold text-[#1C1917] text-right">35/D Regent Colony, Kolkata - 700040</span>
+                  <span className="font-bold text-[#1C1917] sm:text-right">35/D Regent Colony, Kolkata - 700040</span>
                 </div>
 
-                <div className="p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex items-center justify-between">
+                <div className="p-3 sm:p-3.5 rounded-lg bg-[#FFFBF5] border border-[#EA580C]/25 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                   <span className="text-xs text-[#57534E] font-medium">State Code:</span>
                   <span className="font-bold text-[#1C1917]">19 (West Bengal)</span>
                 </div>
               </div>
 
               {/* 4 Compliance Badges */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-[#EA580C]/30">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-5 sm:pt-6 border-t border-[#EA580C]/30">
                 <div className="text-center p-3 rounded-lg bg-white border border-[#DC2626]/20 shadow-sm">
                   <ShieldCheck className="w-6 h-6 text-[#DC2626] mx-auto mb-1" />
                   <span className="text-[11px] font-bold text-[#1C1917] block">Govt Registered</span>

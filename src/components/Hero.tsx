@@ -82,79 +82,79 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
 
           {/* Left Column: Headline, Brand Badges, CTAs */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
             {/* Government Contractor Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#1A0505]/90 border border-[#EA580C]/60 px-4 py-2 rounded-full shadow-lg backdrop-blur-sm">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FACC15] animate-ping" />
-              <ShieldCheck className="w-4 h-4 text-[#FACC15]" />
-              <span className="text-xs sm:text-sm font-semibold tracking-wide text-[#FACC15]">
-                Govt Registered Civil Contractor • Kolkata, West Bengal
+            <div className="inline-flex items-center gap-2 bg-[#1A0505]/95 border border-[#EA580C]/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg backdrop-blur-sm max-w-full">
+              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#FACC15] animate-ping shrink-0" />
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FACC15] shrink-0" />
+              <span className="text-[11px] xs:text-xs sm:text-sm font-semibold tracking-wide text-[#FACC15] text-left sm:text-center leading-tight">
+                Govt Registered Civil Contractor • Kolkata, WB
               </span>
             </div>
 
             {/* Main Authority Headline */}
             <div className="space-y-2">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-['Montserrat',sans-serif] tracking-tight leading-[1.1] text-white">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black font-['Montserrat',sans-serif] tracking-tight leading-[1.15] text-white">
                 Building a <span className="gold-gradient-text">Better Tomorrow</span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl font-medium text-[#FACC15] tracking-wide">
+              <p className="text-base sm:text-xl lg:text-2xl font-medium text-[#FACC15] tracking-wide">
                 Trusted Government Civil Contractor &amp; General Order Supplier
               </p>
             </div>
 
             {/* Sub-headline / Brand Value Proposition */}
-            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            <p className="text-sm sm:text-lg text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
               BSA Enterprise delivers high-precision civil engineering, robust municipal infrastructure,
               and turnkey building construction across Kolkata and West Bengal. Certified material procurement
               backed by unwavering compliance and transparent execution.
             </p>
 
             {/* Key Trust Checkmarks */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 pt-2 text-xs sm:text-sm font-medium text-white/90">
-              <div className="flex items-center gap-2 justify-center lg:justify-start">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-4 pt-1 text-xs sm:text-sm font-medium text-white/90">
+              <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#FACC15] shrink-0" />
                 <span>Govt Tender Ready</span>
               </div>
-              <div className="flex items-center gap-2 justify-center lg:justify-start">
+              <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#FACC15] shrink-0" />
                 <span>100% Tax Compliant</span>
               </div>
-              <div className="flex items-center gap-2 justify-center lg:justify-start">
+              <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#FACC15] shrink-0" />
                 <span>Prompt Material Dispatch</span>
               </div>
             </div>
 
             {/* Primary & Secondary Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2 sm:pt-4">
               <a
                 href="#contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-extrabold btn-gold-shimmer text-white flex items-center justify-center gap-2.5 shadow-xl"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-extrabold btn-gold-shimmer text-white flex items-center justify-center gap-2.5 shadow-xl"
               >
                 <span>Get a Free Quote</span>
-                <ArrowRight className="w-5 h-5 text-white" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </a>
 
               <a
                 href="#services"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold btn-gold-outline flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold btn-gold-outline flex items-center justify-center gap-2"
               >
                 <span>Our Services</span>
               </a>
 
               <a
                 href={siteConfig.company.contact.phoneTel}
-                className="w-full sm:w-auto px-5 py-4 rounded-xl text-base font-bold text-white/95 hover:text-[#FACC15] transition-colors flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-4 sm:px-5 py-3 sm:py-4 rounded-xl text-sm sm:text-base font-bold text-white/95 hover:text-[#FACC15] transition-colors flex items-center justify-center gap-2 border border-white/10 sm:border-transparent rounded-xl"
               >
                 <PhoneCall className="w-4 h-4 text-[#FACC15]" />
-                <span className="text-sm font-semibold">{siteConfig.company.contact.phoneFormatted}</span>
+                <span className="text-xs sm:text-sm font-semibold">{siteConfig.company.contact.phoneFormatted}</span>
               </a>
             </div>
           </div>
 
           {/* Right Column: Framed Founder Portrait with Red/Orange/Yellow Bezel */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm sm:max-w-md">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end px-2 sm:px-0">
+            <div className="relative w-full max-w-[340px] xs:max-w-sm sm:max-w-md">
               {/* Outer Red-Orange-Yellow Frame */}
               <div className="relative p-2 rounded-2xl bg-gradient-to-b from-[#FACC15] via-[#EA580C] to-[#DC2626] shadow-2xl">
 
@@ -175,37 +175,37 @@ export default function Hero() {
                     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none" />
 
                     {/* Founder Designation Floating Badge */}
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 sm:p-3 rounded-lg bg-[#1A0505]/90 backdrop-blur-md border border-[#EA580C]/60 shadow-lg">
+                    <div className="absolute bottom-2 left-2 right-2 p-2 sm:p-3 rounded-lg bg-[#1A0505]/95 backdrop-blur-md border border-[#EA580C]/60 shadow-lg">
                       <div className="flex items-center justify-between">
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#FACC15] block">
+                          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-[#FACC15] block">
                             Founder &amp; Proprietor
                           </span>
-                          <span className="text-base sm:text-lg font-extrabold text-white font-['Montserrat',sans-serif]">
+                          <span className="text-sm sm:text-lg font-extrabold text-white font-['Montserrat',sans-serif]">
                             {siteConfig.founder.name}
                           </span>
                         </div>
-                        <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#DC2626] border border-[#FACC15] flex items-center justify-center shadow-md shrink-0">
-                          <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#FACC15]" />
+                        <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#DC2626] border border-[#FACC15] flex items-center justify-center shadow-md shrink-0">
+                          <Award className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#FACC15]" />
                         </div>
                       </div>
-                      <div className="text-[10px] sm:text-[11px] text-white/80 font-medium mt-0.5 sm:mt-1 flex items-center gap-1.5">
-                        <span className="w-2 h-2 rounded-full bg-[#FACC15]" />
-                        <span>Govt Registered Contractor • Kolkata</span>
+                      <div className="text-[9px] sm:text-[11px] text-white/80 font-medium mt-0.5 sm:mt-1 flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-[#FACC15] shrink-0" />
+                        <span className="truncate">Govt Registered Contractor • Kolkata</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Trust Pill */}
-              <div className="absolute -top-3 -left-3 sm:-left-5 bg-[#DC2626] border-2 border-[#FACC15] text-white px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 text-xs font-bold animate-float-slow">
-                <FileCheck2 className="w-4 h-4 text-[#FACC15]" />
+              {/* Floating Trust Pill - Inset slightly on mobile to avoid negative margin overflow */}
+              <div className="absolute top-1 left-1 sm:-top-3 sm:-left-4 bg-[#DC2626] border-2 border-[#FACC15] text-white px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full shadow-xl flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-bold animate-float-slow">
+                <FileCheck2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FACC15]" />
                 <span>Govt Certified Contractor</span>
               </div>
 
-              {/* Tagline Ribbon */}
-              <div className="absolute -bottom-3 -right-2 sm:-right-4 bg-gradient-to-r from-[#FACC15] via-[#EA580C] to-[#DC2626] text-white px-4 py-1.5 rounded-full shadow-xl text-xs font-black tracking-wider uppercase">
+              {/* Tagline Ribbon - Inset slightly on mobile to avoid negative margin overflow */}
+              <div className="absolute bottom-1 right-1 sm:-bottom-3 sm:-right-4 bg-gradient-to-r from-[#FACC15] via-[#EA580C] to-[#DC2626] text-white px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-xl text-[9px] sm:text-xs font-black tracking-wider uppercase">
                 Building A Better Tomorrow
               </div>
             </div>
