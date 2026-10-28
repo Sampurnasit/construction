@@ -11,7 +11,6 @@ import {
   Play,
   Pause,
   Images,
-  ArrowRight,
   Camera,
 } from "lucide-react";
 
@@ -308,25 +307,6 @@ export default function ProjectsGallery() {
                 );
               })}
             </div>
-          </div>
-
-          {/* Clean Contact Action Callout */}
-          <div className="mt-10 p-6 rounded-2xl bg-[#FFFBF5] border border-[#EA580C]/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
-            <div>
-              <h4 className="font-['Montserrat',sans-serif] font-bold text-base text-[#1C1917]">
-                Require Civil Execution or Material Supply for Your Project?
-              </h4>
-              <p className="text-xs sm:text-sm text-[#57534E] mt-0.5">
-                BSA Enterprise is a certified government civil contractor headquartered in Kolkata.
-              </p>
-            </div>
-            <a
-              href="#contact"
-              className="px-6 py-2.5 rounded-xl text-xs font-bold btn-gold-shimmer text-white shrink-0 flex items-center gap-2 shadow-md hover:scale-105 transition-transform"
-            >
-              <span>Request Quotation</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
         </div>
 

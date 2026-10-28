@@ -8,7 +8,6 @@ import {
   Building2,
   Handshake,
   CheckCircle2,
-  ArrowRight,
   Sparkles,
 } from "lucide-react";
 
@@ -105,61 +104,15 @@ export default function Services() {
                 </div>
               </div>
 
-              {/* Bottom Inquire Button */}
-              <div className="pt-6 border-t border-[#EA580C]/20 flex items-center justify-between">
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    if (typeof window !== "undefined") {
-                      window.dispatchEvent(
-                        new CustomEvent("select-service", {
-                          detail: { service: service.title },
-                        })
-                      );
-                      const contactEl = document.getElementById("contact");
-                      if (contactEl) {
-                        contactEl.scrollIntoView({ behavior: "smooth" });
-                      }
-                    }
-                  }}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#DC2626] hover:text-[#EA580C] group-hover:text-[#EA580C] transition-colors cursor-pointer"
-                >
-                  <span>Inquire for {service.title}</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-                </a>
-                <span className="text-xs font-semibold text-[#57534E]">Kolkata &amp; WB</span>
+              {/* Bottom Card Meta */}
+              <div className="pt-5 border-t border-[#EA580C]/20 flex items-center justify-between text-xs">
+                <span className="font-bold uppercase tracking-wider text-[#DC2626]">
+                  Institutional Standard
+                </span>
+                <span className="font-semibold text-[#57534E]">Kolkata &amp; WB</span>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom Banner Strip for Tender Queries */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#2B0A0A] via-[#3A0B0B] to-[#1A0505] text-white border border-[#EA580C]/40 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center md:text-left">
-            <h4 className="text-lg sm:text-xl font-bold font-['Montserrat',sans-serif] text-[#FACC15]">
-              Looking for a Government Tender Bidder or Material Partner?
-            </h4>
-            <p className="text-xs sm:text-sm text-white/80 max-w-xl">
-              We provide formal quotations, BOQ reviews, and statutory EMD documentation for government civil projects.
-            </p>
-          </div>
-          <div className="flex items-center gap-3 shrink-0">
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-xl text-sm font-bold btn-gold-shimmer text-white shadow-lg"
-            >
-              Submit Tender Spec
-            </a>
-            <a
-              href={siteConfig.company.contact.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-3 rounded-xl text-sm font-semibold border border-[#EA580C] text-[#FACC15] hover:bg-[#EA580C]/15 transition-colors"
-            >
-              WhatsApp Us
-            </a>
-          </div>
         </div>
 
       </div>

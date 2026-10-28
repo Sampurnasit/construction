@@ -104,10 +104,10 @@ export default function WhyChooseUs() {
             </p>
           </div>
           <a
-            href="#contact"
-            className="px-5 py-2.5 rounded-lg text-xs font-bold btn-gold-shimmer text-white shrink-0 shadow-lg"
+            href={siteConfig.company.contact.phoneTel}
+            className="px-5 py-2.5 rounded-lg text-xs font-bold bg-white/10 hover:bg-white/20 text-[#FACC15] border border-[#EA580C]/40 shrink-0 transition-colors"
           >
-            Initiate Contact
+            Call {siteConfig.company.contact.phoneFormatted}
           </a>
         </div>
 

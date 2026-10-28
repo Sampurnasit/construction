@@ -8,8 +8,6 @@ import {
   CheckCircle2,
   Building2,
   MapPin,
-  ArrowRight,
-  ShieldCheck,
   ThumbsUp,
   PenLine,
   Send,
@@ -524,40 +522,6 @@ export default function Testimonials() {
                 </div>
               </form>
             )}
-          </div>
-        </div>
-
-        {/* Bottom Call to Action Banner */}
-        <div className="bg-gradient-to-r from-[#2A0606] via-[#1E0404] to-[#2A0606] border border-[#EA580C]/40 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left relative z-10">
-            <div className="max-w-2xl">
-              <span className="text-xs font-bold text-[#FACC15] tracking-widest uppercase inline-flex items-center gap-1.5 mb-2">
-                <ShieldCheck className="w-4 h-4 text-[#FACC15]" /> Official Govt Civil Contractor
-              </span>
-              <h3 className="font-['Montserrat',sans-serif] text-2xl sm:text-3xl font-black text-white">
-                Have an Upcoming Civil Tender or Supply Requirement?
-              </h3>
-              <p className="text-sm text-white/80 mt-2 font-light">
-                Consult directly with Founder Sayantan Das for precise BOQ estimates, certified material procurement, and verified milestone handovers.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold btn-gold-shimmer text-white shadow-xl hover:scale-105 transition-transform"
-              >
-                <span>Request a Free Quotation</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-
-              <a
-                href={siteConfig.company.contact.phoneTel}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-colors"
-              >
-                <span>Call {siteConfig.company.contact.phoneFormatted}</span>
-              </a>
-            </div>
           </div>
         </div>
       </div>
