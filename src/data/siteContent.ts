@@ -339,6 +339,11 @@ export const siteConfig = {
     { id: "img-12", src: "/images/img12.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 12" },
     { id: "img-13", src: "/images/img13.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 13" },
     { id: "img-14", src: "/images/img14.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 14" },
+    { id: "img-15", src: "/images/img15.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 15" },
+    { id: "img-16", src: "/images/img16.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 16" },
+    { id: "img-17", src: "/images/img17.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 17" },
+    { id: "img-18", src: "/images/img18.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 18" },
+    { id: "img-19", src: "/images/img19.jpeg", alt: "BSA Enterprise On-Site Civil Construction Work 19" },
   ] as GalleryImage[],
 
   // Projects / Portfolio Gallery
@@ -416,7 +421,7 @@ export const siteConfig = {
     name: "Sayantan Das",
     title: "Founder & Proprietor",
     badge: "Govt Registered Civil Contractor",
-    image: "/founder.png",
+    image: "/founder.jpeg",
     statement: "At BSA Enterprise, we measure our success not merely by structures raised, but by the enduring trust placed in us by government agencies, institutions, and project partners. Our commitment to Kolkata and West Bengal is anchored in precision engineering, honest commerce, and unwavering statutory compliance. When we lay a foundation, we build for generations.",
     credentials: [
       "Certified Government Civil Contractor",

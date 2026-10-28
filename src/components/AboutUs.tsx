@@ -121,10 +121,10 @@ export default function AboutUs() {
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#FACC15] shadow-lg shrink-0">
                   <Image
-                    src="/founder.png"
+                    src={siteConfig.founder.image}
                     alt="Sayantan Das - Founder"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[25%_25%] scale-[1.8] origin-[25%_25%]"
                   />
                 </div>
                 <div>

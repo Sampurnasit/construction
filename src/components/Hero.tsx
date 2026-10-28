@@ -162,34 +162,34 @@ export default function Hero() {
                 <div className="relative rounded-xl overflow-hidden bg-gradient-to-b from-[#2B0A0A] to-[#1A0505] p-1.5">
 
                   {/* Portrait Image */}
-                  <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-gradient-to-b from-[#3A0B0B] to-[#1A0505]">
+                  <div className="relative aspect-[4/3.8] sm:aspect-[4/3.6] w-full rounded-lg overflow-hidden bg-stone-900">
                     <Image
-                      src="/founder.png"
+                      src={siteConfig.founder.image}
                       alt="Sayantan Das - Founder & Managing Director of BSA Enterprise"
                       fill
-                      className="object-cover object-top hover:scale-105 transition-transform duration-700"
+                      className="object-cover object-[26%_center] hover:scale-105 transition-transform duration-700"
                       priority
                     />
 
-                    {/* Gradient Overlay for bottom text legibility */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A0505] via-transparent to-transparent opacity-80" />
+                    {/* Subtle bottom gradient overlay for legibility without darkening the photo */}
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none" />
 
                     {/* Founder Designation Floating Badge */}
-                    <div className="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-[#1A0505]/92 backdrop-blur-md border border-[#EA580C]/60 shadow-lg">
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 sm:p-3 rounded-lg bg-[#1A0505]/90 backdrop-blur-md border border-[#EA580C]/60 shadow-lg">
                       <div className="flex items-center justify-between">
                         <div>
                           <span className="text-[10px] font-bold uppercase tracking-wider text-[#FACC15] block">
                             Founder &amp; Proprietor
                           </span>
-                          <span className="text-lg font-extrabold text-white font-['Montserrat',sans-serif]">
+                          <span className="text-base sm:text-lg font-extrabold text-white font-['Montserrat',sans-serif]">
                             {siteConfig.founder.name}
                           </span>
                         </div>
-                        <div className="w-9 h-9 rounded-full bg-[#DC2626] border border-[#FACC15] flex items-center justify-center shadow-md">
-                          <Award className="w-5 h-5 text-[#FACC15]" />
+                        <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#DC2626] border border-[#FACC15] flex items-center justify-center shadow-md shrink-0">
+                          <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#FACC15]" />
                         </div>
                       </div>
-                      <div className="text-[11px] text-white/80 font-medium mt-1 flex items-center gap-1.5">
+                      <div className="text-[10px] sm:text-[11px] text-white/80 font-medium mt-0.5 sm:mt-1 flex items-center gap-1.5">
                         <span className="w-2 h-2 rounded-full bg-[#FACC15]" />
                         <span>Govt Registered Contractor • Kolkata</span>
                       </div>
