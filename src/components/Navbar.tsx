@@ -81,11 +81,19 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col min-w-0">
                 <div className="flex items-center leading-tight">
-                  <span className="font-['Montserrat',sans-serif] font-black text-lg xs:text-xl sm:text-2xl tracking-wide text-white group-hover:text-[#FACC15] transition-colors">
+                  <span
+                    className="font-['Montserrat',sans-serif] font-black text-lg xs:text-xl sm:text-2xl tracking-wide text-[#FACC15] transition-all group-hover:brightness-110"
+                    style={{
+                      WebkitTextStroke: "1px #DC2626",
+                      paintOrder: "stroke fill",
+                      textShadow: "0 0 10px rgba(220, 38, 38, 0.45)",
+                    }}
+                  >
                     BSA ENTERPRISE
                   </span>
                 </div>
-                <span className="text-[8.5px] xs:text-[10px] sm:text-[11px] font-medium tracking-wide text-white/80 uppercase truncate block">
+                <div className="h-[1.5px] w-full bg-gradient-to-r from-[#DC2626] via-[#EA580C] to-transparent my-0.5" />
+                <span className="text-[8.5px] xs:text-[10px] sm:text-[11px] font-semibold tracking-wide text-white/90 uppercase truncate block">
                   <span className="sm:hidden">Govt Civil Contractor &amp; Supplier</span>
                   <span className="hidden sm:inline">Govt Civil Contractor &amp; General Order Supplier</span>
                 </span>

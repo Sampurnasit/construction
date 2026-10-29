@@ -39,10 +39,18 @@ export default function Footer() {
               </div>
               <div>
                 <div className="flex items-center leading-tight">
-                  <span className="font-['Montserrat',sans-serif] font-black text-xl sm:text-2xl tracking-wider text-white group-hover:text-[#FACC15] transition-colors">
+                  <span
+                    className="font-['Montserrat',sans-serif] font-black text-xl sm:text-2xl tracking-wider text-[#FACC15] transition-all group-hover:brightness-110"
+                    style={{
+                      WebkitTextStroke: "1.2px #DC2626",
+                      paintOrder: "stroke fill",
+                      textShadow: "0 0 12px rgba(220, 38, 38, 0.45)",
+                    }}
+                  >
                     BSA ENTERPRISE
                   </span>
                 </div>
+                <div className="h-[1.5px] w-full bg-gradient-to-r from-[#DC2626] via-[#EA580C] to-transparent my-1" />
                 <span className="text-[10px] uppercase tracking-wide text-[#FACC15] font-semibold block">
                   Govt Civil Contractor &amp; General Order Supplier
                 </span>
