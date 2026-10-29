@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Brand Info Column */}
           <div className="lg:col-span-5 space-y-5">
             <Link href="#hero" className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+              <div className="relative w-14 h-14 shrink-0">
                 <Image
                   src="/bsa-logo.png"
                   alt="BSA Enterprise Logo"
@@ -38,12 +38,9 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="font-['Montserrat',sans-serif] font-black text-2xl tracking-wider text-white">
-                    BSA
-                  </span>
-                  <span className="font-['Montserrat',sans-serif] font-bold text-xl tracking-widest text-[#FACC15]">
-                    ENTERPRISE
+                <div className="flex items-center leading-tight">
+                  <span className="font-['Montserrat',sans-serif] font-black text-xl sm:text-2xl tracking-wider text-white group-hover:text-[#FACC15] transition-colors">
+                    BSA ENTERPRISE
                   </span>
                 </div>
                 <span className="text-[10px] uppercase tracking-wide text-[#FACC15] font-semibold block">

@@ -69,7 +69,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="flex items-center gap-2 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-[#FACC15] rounded-lg p-1 min-w-0 max-w-[calc(100%-60px)] sm:max-w-none"
             >
-              <div className="relative w-9 h-9 xs:w-11 xs:h-11 sm:w-13 sm:h-13 transition-transform group-hover:scale-105 shrink-0">
+              <div className="relative w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 transition-transform group-hover:scale-105 shrink-0">
                 <Image
                   src="/bsa-logo.png"
                   alt="BSA Enterprise Logo"
@@ -80,12 +80,9 @@ export default function Navbar() {
                 />
               </div>
               <div className="flex flex-col min-w-0">
-                <div className="flex items-center gap-1 sm:gap-1.5 leading-tight">
-                  <span className="font-['Montserrat',sans-serif] font-black text-lg xs:text-xl sm:text-2xl tracking-wide text-white">
-                    BSA
-                  </span>
-                  <span className="font-['Montserrat',sans-serif] font-bold text-base xs:text-lg sm:text-xl tracking-wider text-[#FACC15]">
-                    ENTERPRISE
+                <div className="flex items-center leading-tight">
+                  <span className="font-['Montserrat',sans-serif] font-black text-lg xs:text-xl sm:text-2xl tracking-wide text-white group-hover:text-[#FACC15] transition-colors">
+                    BSA ENTERPRISE
                   </span>
                 </div>
                 <span className="text-[8.5px] xs:text-[10px] sm:text-[11px] font-medium tracking-wide text-white/80 uppercase truncate block">

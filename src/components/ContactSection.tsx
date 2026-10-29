@@ -104,16 +104,14 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     const messageLines = [
-      "🏗️ *NEW QUOTATION REQUEST - BSA ENTERPRISE*",
-      "━━━━━━━━━━━━━━━━━━━━━━━━━",
-      `👤 *Name / Entity:* ${formData.name.trim()}`,
-      `📞 *Contact Number:* ${formData.phone.trim()}`,
-      `✉️ *Email Address:* ${formData.email.trim()}`,
-      `🏢 *Service Required:* ${formData.service}`,
-      `📋 *Project Scope / Requirements:*`,
+      "*NEW QUOTATION REQUEST - BSA ENTERPRISE*",
+      "----------------------------------------",
+      `*Name / Entity:* ${formData.name.trim()}`,
+      `*Contact Number:* ${formData.phone.trim()}`,
+      `*Email Address:* ${formData.email.trim()}`,
+      `*Service Required:* ${formData.service}`,
+      `*Project Scope / Requirements:*`,
       formData.message.trim(),
-      "━━━━━━━━━━━━━━━━━━━━━━━━━",
-      "Sent via BSA Enterprise Official Website",
     ];
 
     const messageText = messageLines.join("\n");
@@ -332,17 +330,9 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl text-sm font-bold btn-gold-shimmer text-white flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-lg"
+                  className="w-full py-4 rounded-xl text-sm font-bold btn-gold-shimmer text-white flex items-center justify-center cursor-pointer disabled:opacity-50 shadow-lg"
                 >
-                  {isSubmitting ? (
-                    <span>Opening WhatsApp with your details...</span>
-                  ) : (
-                    <>
-                      <MessageCircle className="w-5 h-5 fill-white stroke-transparent shrink-0" />
-                      <span>Submit &amp; Request Quote on WhatsApp</span>
-                      <Send className="w-4 h-4 text-white shrink-0" />
-                    </>
-                  )}
+                  <span>{isSubmitting ? "Submitting..." : "Submit"}</span>
                 </button>
 
                 <p className="text-[11px] text-center text-[#57534E] pt-1">
