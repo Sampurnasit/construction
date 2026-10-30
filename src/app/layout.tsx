@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "Building Construction Kolkata",
     "TMT Steel Cement Supplier",
   ],
-  authors: [{ name: "Sayantan Das", url: "https://bsaenterprise.com" }],
+  authors: [{ name: "Sayantan Das", url: "https://bsa-enterprise.vercel.app" }],
   creator: "BSA Enterprise",
   publisher: "BSA Enterprise",
   formatDetection: {
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
     email: true,
     address: true,
   },
-  metadataBase: new URL("https://bsaenterprise.com"),
+  metadataBase: new URL("https://bsa-enterprise.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://bsaenterprise.com",
+    url: "https://bsa-enterprise.vercel.app",
     title: "BSA Enterprise | Govt Civil Contractor & General Order Supplier in Kolkata",
     description:
       "Building a Better Tomorrow. Premier Government Civil Contractor and General Order Supplier based in Regent Colony, Kolkata. Founder: Sayantan Das.",
@@ -104,7 +104,8 @@ export default function RootLayout({
     "@type": "GeneralContractor",
     "name": siteConfig.company.name,
     "legalName": siteConfig.company.legalName,
-    "image": "https://bsaenterprise.com/logo.png",
+    "url": "https://bsa-enterprise.vercel.app",
+    "image": "https://bsa-enterprise.vercel.app/logo.png",
     "description": "Government Civil Contractor and General Order Supplier in Kolkata, West Bengal.",
     "telephone": siteConfig.company.contact.phoneFormatted,
     "email": siteConfig.company.contact.email,
